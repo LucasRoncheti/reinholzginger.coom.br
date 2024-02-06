@@ -1,72 +1,75 @@
-.thirthSection{
-    background: rgb(156,59,32);
-    background: -moz-linear-gradient(236deg, rgba(156,59,32,1) 0%, rgba(229,89,51,1) 100%);
-    background: -webkit-linear-gradient(236deg, rgba(156,59,32,1) 0%, rgba(229,89,51,1) 100%);
-    background: linear-gradient(236deg, rgba(156,59,32,1) 0%, rgba(229,89,51,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c3b20",endColorstr="#e55933",GradientType=1);
+.thirthSection {
+    background: rgb(156, 59, 32);
+    background: -moz-linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    background: -webkit-linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    background: linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c3b20", endColorstr="#e55933", GradientType=1);
 
+    overflow: hidden;
+}
 
-}   
-
-.containerDivs{
+.containerDivs {
     width: 100%;
     height: 70%;
     display: flex;
- 
+
 }
 
-.containerDivs div{
-    width: 50%;
-}   
-
-.inferiorDiv{
+.containerDivs div {
     width: 100%;
-    height: 30%;
-
-}
-
-.imgContainer2 img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 95%;
-    min-width: 600px;
-}
-
-.imgContainer2{
-    position: relative;
-    
 }
 
 
 
-.textThirdthSection{
-    width: 40%;
-    position: relative;
-    height: 300px;
-    position: absolute;
-    
-}
-
-.text{
-    color: var(--branco);
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateX(-50%);
-  
-}
-
-.inferiorDiv {
-    display: flex;
-    justify-content: center;
-}
-.inferiorDiv img{
+.inferiorDiv img {
     width: 80%;
     max-width: 1600px;
 
 
 }
 
+.inferiorDiv {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
 
+}
+
+
+.contentThirdthSection {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    text-shadow: var(--textShadow);
+    text-align: center;
+}
+
+.contentThirdthSection img {
+    position: absolute;
+    top: -200px;
+}
+
+
+.h2TextSection3{
+ font-size: var(--fontH2);
+ margin-bottom: 3%;
+}
+
+.pTextSection3{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+.containerPhoto{
+    width: 50%;
+    max-width: 1000px;
+    min-width:500px
+}

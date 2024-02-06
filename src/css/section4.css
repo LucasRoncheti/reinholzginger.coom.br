@@ -1,0 +1,195 @@
+/*the fourth page starts here */
+
+.fouthSection {
+    display: flexd;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upSection {
+    width: 100%;
+    height: 50%;
+    background-color: var(--cor01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.map {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rightBoxFourthPage {
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.containerTextFourthPage {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+
+}
+
+.containerTextFourthPage span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco);
+}
+
+.containerTextFourthPage p {
+    width: 700px;
+    font-size: var(--fontParagraph);
+    color: var(--branco);
+}
+
+.containerTextFourthPage a {
+    width: 140px;
+    height: 35px;
+    border: solid 2px var(--branco);
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 1.3em;
+    color: var(--branco);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+
+.containerTextFourthPage a:hover{
+    background-color: var(--cor02);
+   
+}
+.downSection {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textContact {
+    width: 50%;
+    height: 50%;
+
+    text-align: right;
+
+    display: flex;
+    
+ 
+    flex-direction: column;
+    align-items: right;
+}
+
+.containerTextForm{
+
+}
+
+.anotherDiv{
+    height: 50%;
+}
+
+
+.textContact span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor04);
+    display: block;
+}
+
+.textContact h2{
+    font-size: 2em;
+    margin: 5px 0px 5px 0px;
+    
+}
+
+.textContact p {
+
+    font-size: var(--fontParagraph);
+ 
+}
+
+
+.formContact {
+    width: 50%;
+    height: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+
+
+.inputArea{
+    width: 70%;
+    margin-left: 10px;
+}
+
+.formContact input{
+    width: 100%;
+    height: 30px;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+    padding: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
+.textArea{
+    display: flex;
+
+    width: 100%;
+    
+}
+
+.formContact textarea{
+    width:64%;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+    margin: 0% 1% 0% 10px;
+
+    padding: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+}
+.sendButton{
+    width: 5%;
+    height: 100%;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    cursor: pointer;
+}
+
+.sendButton:hover{
+    background-color: var(--cor02);
+    transition: 0.4s;
+}
+

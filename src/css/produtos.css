@@ -1,0 +1,90 @@
+/* Inicia aqui a sessão com página principal */
+
+
+header{
+    width: 100%;
+    height: 180px;
+  
+    position: absolute;
+    z-index: 4;
+
+}
+
+.containerHeader{
+    width: 1600px;
+    height: 100%;
+
+    margin: auto;
+    border-bottom: solid 1px var(--cor01) ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+
+.containerHeader img{
+
+    width: 90%;
+
+}
+
+nav{
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav div{
+    margin: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+nav div:hover{
+    background-color: var(--branco);
+}
+
+
+
+.containerContent{
+    width: 100%;
+    height: calc(100% - 180px);
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.imgProdutos{
+    width: 50%;
+ 
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+
+    padding-right: 50px;
+
+}
+
+.imgProdutos img{
+    height: 83%;
+    width: 70%;
+}
+.textProdutos{
+    padding-left: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.textProdutos p {
+    width: 70%;
+    line-height: 1.6em;
+}

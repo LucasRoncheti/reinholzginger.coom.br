@@ -55,12 +55,20 @@
     color: var(--cor04);
 }
 
-.containerTextSecondPage button{
+.containerTextSecondPage a{
     width: 140px;
     height: 35px;
     border: solid 2px var(--cor04);
     background-color: transparent;
     border-radius: 20px;
     font-size: 1.3em;
+    text-align: center;
     color: var(--cor04);
+    cursor: pointer;
+    text-decoration: none;
+}
+.containerTextSecondPage a:hover{
+ background-color: var(--cor02);
+ transition: 0.5s;
+ color: white;
 }

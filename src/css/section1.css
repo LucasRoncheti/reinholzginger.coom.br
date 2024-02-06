@@ -107,8 +107,9 @@ nav div:hover{
 }
 
 .textMain h2{
-    font-size: 4em;
+    font-size: var(--fontH2);
     text-shadow: var(--textShadow);
+    margin-bottom: 3%;
 }
 
 .textMain p{
