@@ -1,21 +1,21 @@
 /* Inicia aqui a sessão com página principal */
 
 
-header{
+header {
     width: 100%;
     height: 180px;
-  
+
     position: absolute;
     z-index: 4;
 
 }
 
-.containerHeader{
+.containerHeader {
     width: 1600px;
     height: 100%;
 
     margin: auto;
-    border-bottom: solid 1px var(--branco) ;
+    border-bottom: solid 1px var(--branco);
 
     display: flex;
     justify-content: space-between;
@@ -24,14 +24,14 @@ header{
 
 }
 
-.containerHeader img{
+.containerHeader img {
     height: 80%;
-    
+
     width: 90%;
 
 }
 
-nav{
+nav {
     width: 700px;
     height: auto;
     display: flex;
@@ -40,21 +40,26 @@ nav{
     color: var(--branco);
 }
 
-nav div{
+nav div {
     margin: 20px;
     font-weight: 500;
     cursor: pointer;
-    
+
 }
 
-nav div:hover{
+nav div:hover {
     background-color: var(--branco);
     color: var(--cor02);
 }
 
 
+.containerHeader a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
 
-.containerContent{
+.containerContent {
     width: 100%;
     height: 100%;
     display: flex;
@@ -65,9 +70,9 @@ nav div:hover{
     bottom: 0;
 }
 
-.imgProdutos{
+.imgProdutos {
     width: 100%;
- 
+
     display: flex;
     justify-content: right;
     align-items: center;
@@ -76,19 +81,20 @@ nav div:hover{
 
 }
 
-.imgProdutos img{
-    height: 83%;
+.imgProdutos img {
+
     width: 100%;
 }
-.textProdutos{
-  
+
+.textProdutos {
+
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
- height: auto;
+    height: auto;
 
- margin-bottom: 5%;
+    margin: 2% auto 5% auto;
 
 
 }

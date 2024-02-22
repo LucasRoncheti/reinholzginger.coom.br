@@ -51,10 +51,6 @@
     text-align: center;
 }
 
-.contentThirdthSection img {
-    position: absolute;
-    top: -200px;
-}
 
 
 .h2TextSection3{
@@ -68,8 +64,20 @@
 }
 
 
-.containerPhoto{
+.containerPhoto {
     width: 50%;
     max-width: 1000px;
-    min-width:500px
+    min-width: 500px;
+    position: absolute;
+    top: -200px;
+    animation: moveContainer 14s ease-in-out infinite;
+}
+
+@keyframes moveContainer{
+    0%{
+        top: -200px;
+    }
+    50%{
+        top: -50px;
+    }
 }

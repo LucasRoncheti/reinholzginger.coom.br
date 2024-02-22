@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 :root{
     font-family: 'Montserrat', sans-serif;
 
@@ -19,6 +22,8 @@
     --fontParagraph:1.3em;
 
     --fontH2: 4em;
+
+    --timeSlider:7s;
 }
 
 body{
@@ -38,4 +43,6 @@ body{
     width: 100%;
     height: 100%;
 }
+
+
 

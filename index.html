@@ -10,34 +10,45 @@
     <link rel="stylesheet" href="src/css/section3.css">
     <link rel="stylesheet" href="src/css/section4.css">
     <link rel="stylesheet" href="src/css/footer.css">
+
+    <link rel="shortcut icon" href="src/img/favicon.svg" type="image/x-icon">
     <title>Reinholz Ginger</title>
 </head>
 
 <body>
     <section class="section">
-        <header>
+        <header >
             <div class="containerHeader">
                 <img src="src/img/logoWhiteTransp.png" alt="Logo Reinholz Ginger">
                 <nav>
+                    <a href="index.html">
+                        <div>HOME</div>
+                    </a>
                     <a href="src/pages/institucional.html">
                         <div>INSTITUCIONAL</div>
                     </a>
-                    <div>PRODUTOS</div>
+
+                    <a href="src/pages/produtos.html">
+                        <div>PRODUTOS</div>
+                    </a>
+
                     <a href="src/pages/expotacao.html">
                         <div>EXPORTAÇÃO</div>
                     </a>
-                    <div>CONTATO</div>
+                    <a href="#downSection">
+                        <div>CONTATO</div>
+                    </a>
                     <div>PT-ENG</div>
                 </nav>
             </div>
         </header>
         <div class="containerSlider">
-            <div class="textSign">
+            <div id="textSign" class="textSign orange">
 
             </div>
 
-            <div class="textMain">
-                <div>
+            <div id="textMain" class="textMain ">
+                <div id="textInside" class="textInside slideText">
                     <h2>Do Brasil para o Mundo:</h2>
                     <p>Oferecemos gengibre de alta qualidade,
                         cultivado com cuidado e dedicação
@@ -46,11 +57,15 @@
 
             </div>
             <div class="containerImg">
-                <img src="src/img/background.jpg" alt="Imagem de uma plantação">
-                <img src="src/img/background2.jpg" alt="Imagem de um porto ">
-                <img src="src/img/foto gengibre.jpg" alt="Imagem gengibre e plantação de fundo ">
+                <img  class="slide" id="img01" src="src/img/background.jpg" alt="Imagem de uma plantação">
+                <img class="slide" id="img02" src="src/img/background2.jpg" alt="Imagem de um porto ">
+                <img class="slide" id="img03" src="src/img/foto gengibre.jpg" alt="Imagem gengibre e plantação de fundo ">
             </div>
+           
         </div>
+
+        <span class="spanLineOrange"></span>
+        <span class="spanLineGreen"></span>
     </section>
 
     <!-- segunda página  -->
@@ -115,7 +130,7 @@
 
             </div>
         </div>
-        <div class="downSection">
+        <div id ="downSection" class="downSection">
 
             <div class="textContact">
                 <span></span>
@@ -130,7 +145,7 @@
                 <div class="anotherDiv"></div>
             </div>
 
-            <div class="formContact">
+            <div id="contact" class="formContact">
                 <div class="inputArea">
                     <input type="text" placeholder="Nome">
                 </div>
@@ -226,3 +241,5 @@
 </body>
 
 </html>
+
+<script src="features/js/mainSlide.js"></script>
