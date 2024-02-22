@@ -193,3 +193,12 @@
     transition: 0.4s;
 }
 
+
+
+/* portabilidade para mobile a partir daqui */
+
+@media screen and (max-width:768px){
+    .containerTextFourthPage,.map{
+        display: none;
+    }
+}

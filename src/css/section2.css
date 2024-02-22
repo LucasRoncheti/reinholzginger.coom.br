@@ -1,4 +1,6 @@
-
+.secondSection{
+    display: none;
+}
 .displayFlexSection{
     display: flex;
     flex-direction: row;
@@ -71,4 +73,13 @@
  background-color: var(--cor02);
  transition: 0.5s;
  color: white;
+}
+
+
+/* portabilidade para mobile a partir daqui */
+
+@media screen and (max-width:768px){
+    .containerTextSecondPage{
+        display: none;
+    }
 }
