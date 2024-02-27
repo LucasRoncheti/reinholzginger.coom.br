@@ -4,10 +4,8 @@
 header{
     width: 100%;
     height: 180px;
-  
-    position: absolute;
+    /* position: absolute; */
     z-index: 4;
-
 }
 
 .containerHeader{
@@ -94,4 +92,27 @@ nav div:hover{
 .textProdutos p {
     width: 70%;
     line-height: 1.6em;
+}
+
+
+
+@media screen and (max-width: 1400px){
+
+    /*Produtos*/
+    .section{
+        margin-bottom: 400px;
+    }
+    .containerContent {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .textProdutos p {
+        width: 80%;
+    }
+    
 }

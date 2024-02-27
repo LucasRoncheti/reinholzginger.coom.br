@@ -15,11 +15,9 @@ footer {
 .containerLIstFooter {
     width: 100%;
     height: 390px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .sliceFooter {
@@ -62,4 +60,15 @@ footer {
 
 footer a {
     color: white;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .containerLIstFooter{
+        width: 80%;
+    }
+
+    .imgLogoInstagram{
+        top: 60px;
+    }
 }

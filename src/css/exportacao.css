@@ -83,7 +83,7 @@ nav div:hover {
 
 .imgProdutos img {
 
-    width: 100%;
+width: 100%;
 }
 
 .textProdutos {
@@ -103,4 +103,13 @@ nav div:hover {
     width: 70%;
     line-height: 1.6em;
 
+}
+
+
+@media screen and (max-width: 1400px) {
+    .section{
+        margin-bottom: 200px;
+    }
+
+ 
 }

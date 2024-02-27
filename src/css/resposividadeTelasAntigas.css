@@ -1,0 +1,71 @@
+@media screen and (max-width:1400px) {
+
+
+    .containerHeader {
+        width: 100%;
+        padding: 0% 5%;
+        position: relative;
+    }
+
+    .textSign,
+    .textMain {
+        height: 60%;
+    }
+
+    .textMain h2 {
+        font-size: 2.2em;
+    }
+
+    .textMain p {
+        font-size: 1.7em;
+    }
+
+    .formContact {
+        height: 60%;
+    }
+
+    .textArea {
+        height: 50%;
+    }
+
+    .map img {
+        width: 80%;
+    }
+
+    .containerTextFourthPage p {
+        width: 90%;
+    }
+
+    .leftBox img {
+        width: 80%;
+    }
+
+    .containerLIstFooter {
+        width: 80%;
+        margin: auto;
+    }
+
+    .imgLogoInstagram {
+        top: 60px;
+    }
+
+
+    /*institucional*/
+
+    .textProdutos {
+        width: 70%;
+    }
+
+    .textInstitucional {
+        margin-left: 3%;
+    }
+
+        /*produtos*/
+        /*O responsividade está no final da página de produtos.css */
+
+        
+        /*exportação*/
+        /*O responsividade está no final da página de exportação.css */
+
+    
+}

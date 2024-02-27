@@ -227,3 +227,28 @@ width: 1;
 
     width: 100%;
 }
+
+
+@media screen and (max-width:1400px) {
+        .section2{
+            margin-bottom: 200px;
+        }
+        .downSection{
+            height: 100%;
+        }
+
+        .formContact textarea{
+            height: 100%;
+        }
+        .textContact{
+            width: 80%;
+  
+        }
+
+        .textContact p{
+         font-size: 1.1em;
+         margin-top: 20px;
+
+            
+        }
+}
