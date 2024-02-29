@@ -1,24 +1,25 @@
 /* Inicia aqui a sessão com página principal */
 
 
-header{
+header {
     width: 100%;
     height: 180px;
-  
+
     position: absolute;
     z-index: 4;
 
 }
 
-.section2{
+.section2 {
     height: 120%;
 }
-.containerHeader{
+
+.containerHeader {
     width: 80%;
     height: 100%;
 
     margin: auto;
-    border-bottom: solid 1px var(--branco) ;
+    border-bottom: solid 1px var(--branco);
 
     display: flex;
     justify-content: space-between;
@@ -33,17 +34,17 @@ header{
     text-decoration: none;
     color: white;
     text-shadow: 2px 2px 2px black;
-    
+
 
 }
 
-.containerHeader img{
+.containerHeader img {
 
     width: 90%;
 
 }
 
-nav{
+nav {
     width: 700px;
     height: auto;
     display: flex;
@@ -51,20 +52,20 @@ nav{
     align-items: center;
 }
 
-nav div{
+nav div {
     margin: 20px;
     font-weight: 500;
     cursor: pointer;
-    
+
 }
 
-nav div:hover{
+nav div:hover {
     background-color: var(--branco);
 }
 
 
 
-.containerContent{
+.containerContent {
     width: 100%;
     height: calc(60%);
     display: flex;
@@ -74,11 +75,12 @@ nav div:hover{
 
 
 
-.imgProdutos img{
+.imgProdutos img {
     height: 83%;
     width: 70%;
 }
-.textProdutos{
+
+.textProdutos {
     padding-left: 50px;
     width: 50%;
     display: flex;
@@ -112,13 +114,13 @@ nav div:hover{
 
     display: flex;
 
-    
+
     flex-direction: column;
     align-items: right;
 }
 
 
-.anotherDiv{
+.anotherDiv {
     height: 50%;
 }
 
@@ -130,20 +132,20 @@ nav div:hover{
     display: block;
 }
 
-.textContact h2{
+.textContact h2 {
     font-size: 2em;
     margin: 5px 0px 5px 0px;
     text-align: center;
-    
+
 }
 
 .textContact p {
 
-font-size: 1.0em;
+    font-size: 1.0em;
 
-text-align: center;
+    text-align: center;
 
-width: 1;
+    width: 1;
 }
 
 
@@ -158,13 +160,13 @@ width: 1;
 
 
 
-.inputArea{
-    width: 70%;
+.inputArea {
+    width: 64%;
     margin-left: 10px;
-    margin: auto;
+    margin: 5px 0;
 }
 
-.formContact input{
+.formContact input {
     width: 100%;
     height: 30px;
     border: solid 2px var(--cor04);
@@ -175,36 +177,38 @@ width: 1;
 }
 
 
-.textArea{
+.textArea {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
 }
 
-.formContact textarea{
-    width:64%;
+.formContact textarea {
+    width: 64%;
     border: solid 2px var(--cor04);
     border-radius: 5px;
- 
+
     padding: 3px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
-.sendButton{
-    width: 5%;
-    height: 100%;
+
+.sendButton {
+    width: 50%;
+    height: 20%;
     border: solid 2px var(--cor04);
     border-radius: 5px;
     margin-left: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.sendButton:hover{
+.sendButton:hover {
     background-color: var(--cor02);
     transition: 0.4s;
 }
@@ -219,7 +223,7 @@ width: 1;
     justify-content: right;
     align-items: center;
     text-align: right;
-    
+
 
 }
 
@@ -231,13 +235,21 @@ width: 1;
 
 @media screen and (max-width:1400px) {
 
-    
+    .sendButton{
+        width: 50%;
+        margin-top: 10px;
+    }
     .formContact {
         height: 60%;
     }
 
+    .formContact input{
+        margin: 5px 0;
+    }
     .textArea {
         height: 50%;
+        width: 110%;
+        margin-top: 10px;
     }
 
     .map img {
@@ -247,7 +259,7 @@ width: 1;
 
     .containerTextFourthPage p {
         width: 100%;
-      
+
     }
 
     .leftBox img {
@@ -259,40 +271,43 @@ width: 1;
         margin: auto;
     }
 
-        .containerHeader{
-            width: 80%;
-        }
-        .section2{
-            margin-bottom: 200px;
-        }
-        .downSection{
-            height: 100%;
-        }
+    .containerHeader {
+        width: 80%;
+    }
 
-        .formContact textarea{
-            height: 100%;
-        }
-        .textContact{
-            width: 80%;
-  
-        }
+    .section2 {
+        margin-bottom: 200px;
+    }
 
-        .textContact p{
-         font-size: 1.1em;
-         margin-top: 20px;
+    .downSection {
+        height: 100%;
+    }
 
-            
-        }
+    .formContact textarea {
+        height: 100%;
+    }
+
+    .textContact {
+        width: 80%;
+
+    }
+
+    .textContact p {
+        font-size: 1.1em;
+        margin-top: 20px;
+
+
+    }
 }
 
 
 
 
 
-.botaoLenguage{
+.botaoLenguage {
     min-width: 70px;
     height: 25px;
-    background-color:rgb(244, 244, 244);
+    background-color: rgb(244, 244, 244);
     border: solid 2px rgb(61, 58, 58);
     border-radius: 20px;
     display: flex;
@@ -301,68 +316,74 @@ width: 1;
     position: relative;
     overflow: hidden;
 }
-.parteInternaBotao{
+
+.parteInternaBotao {
     width: 50%;
     height: 100%;
-    background-color:rgb(60, 204, 20) ;
+    background-color: rgb(60, 204, 20);
     box-shadow: 2px 2px 3px rgb(128, 255, 0);
-    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    box-shadow: inset 0px 1px 2px rgb(166, 255, 0);
     border-radius: 20px;
     position: absolute;
     left: 2.5%;
 }
 
-.toLeftButton{
-    animation: toLeftButton 0.5s  ease-in-out forwards;
-}
-.toRightButton{
-    animation: toRightButton 0.5s  ease-in-out forwards;
+.toLeftButton {
+    animation: toLeftButton 0.5s ease-in-out forwards;
 }
 
-@keyframes toLeftButton{
-    0%{
+.toRightButton {
+    animation: toRightButton 0.5s ease-in-out forwards;
+}
+
+@keyframes toLeftButton {
+    0% {
         left: 0%;
     }
-    100%{
+
+    100% {
         left: 50%;
     }
 }
 
-@keyframes toRightButton{
-    0%{
+@keyframes toRightButton {
+    0% {
         left: 50%;
     }
-    100%{
+
+    100% {
         left: 0%;
     }
 }
 
-.botaoLenguage img:nth-child(2){
+.botaoLenguage img:nth-child(2) {
     height: 95%;
     position: absolute;
     left: 2.5%;
-    
+
 }
-.botaoLenguage img:nth-child(3){
+
+.botaoLenguage img:nth-child(3) {
     height: 95%;
     position: absolute;
     right: 2.5%;
 }
 
-.containerHeaderMobile{
+.containerHeaderMobile {
     display: none;
-  }
-  .fadeIn{
+}
+
+.fadeIn {
     display: block;
     animation: fadeInMenu 0.3s ease-in-out forwards;
-  }
+}
 
-  .fadeOut{
-   
+.fadeOut {
+
     animation: fadeOutMenu 0.3s ease-in-out forwards;
-  }
+}
 
-  
+
 @keyframes fadeInMenu {
     0% {
         opacity: 0;
@@ -376,7 +397,7 @@ width: 1;
 
 }
 
-  
+
 @keyframes fadeOutMenu {
     0% {
         opacity: 1;
@@ -394,55 +415,63 @@ width: 1;
 
 
 @media screen and (max-width: 800px) {
-  
 
-    .formContact{
+
+    .formContact {
         height: 50%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+
+    .inputArea {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .formContact textarea {
+        width: 90%;
+    }
+
+    .textContact h2 {
+        font-size: 1.5em;
+    }
+
+    .sendButton {
+        margin-top: 10px;
+        width: 60%;
+    }
+
+    .textArea {
         width: 100%;
     }
 
-    
- .inputArea{
-    width: 90%;
- }
-
-.formContact textarea {
-    width: 80%;
-}
-
-.textContact h2{
-    font-size: 1.5em;
-}
-
-.sendButton{
-    width:8%;
-}
- .textArea{
-    width: 100%;
- }
-
-    .downSection{
+    .downSection {
         height: 50%;
     }
-   .imgProdutos img{
-    margin-top: 40px;
-    height: 100%;
-   }
-   .imgProdutos h2{
-    text-align: center;
-    width: 100%;
+
+    .imgProdutos img {
+        margin-top: 40px;
+        height: 100%;
+    }
+
+    .imgProdutos h2 {
+        text-align: center;
+        width: 100%;
         font-size: 1.5em;
-   }
-    .imagemLogoMobile{
+    }
+
+    .imagemLogoMobile {
         display: block;
         position: absolute;
-        left:50%;
+        left: 50%;
         top: 50%;
-        transform: translate(-50%,80%);
+        transform: translate(-50%, 80%);
         z-index: 200;
         mix-blend-mode: overlay;
     }
-    .containerHeaderMobile{
+
+    .containerHeaderMobile {
         position: absolute;
         width: 100%;
         height: 300px;
@@ -450,17 +479,17 @@ width: 1;
         margin-top: 40px;
     }
 
-    .navMobile{
+    .navMobile {
         width: 100%;
         height: 100%;
         flex-wrap: wrap;
         background-color: rgba(207, 207, 207, 0.88);
         border-radius: 0 0 20px 20px;
-        backdrop-filter:blur(02px);
-        -webkit-backdrop-filter:blur(02px);
+        backdrop-filter: blur(02px);
+        -webkit-backdrop-filter: blur(02px);
     }
 
-    .containerHeaderMobile  a {
+    .containerHeaderMobile a {
         width: 35%;
         height: 20%;
         margin: 5%;
@@ -474,50 +503,52 @@ width: 1;
         border-radius: 10px;
     }
 
-    .containerHeader,.containerImg{
+    .containerHeader,
+    .containerImg {
         display: none;
     }
-    .containerImgMobile{
+
+    .containerImgMobile {
         display: block;
     }
 
-    .textProdutos{
+    .textProdutos {
         width: 100%;
         height: 125%;
         flex-direction: column;
         justify-content: space-around;
-     
-       
+
+
     }
 
-   .imgHistória{
-    width: 70%;
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-   }
+    .imgHistória {
+        width: 70%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-   .imgHistória img{
-    width: 100%;
-   }
+    .imgHistória img {
+        width: 100%;
+    }
 
-   .containerContent{
-    height: 100vh;
-   }
+    .containerContent {
+        height: 100vh;
+    }
 
 
-   .textContact{
-    width: 95%;
-    
-   }
+    .textContact {
+        width: 95%;
 
-   .contact{
-    height: 3;
-   }
+    }
 
-   .section2{
-    margin: 0;
-    height: 100%;
-   }
+    .contact {
+        height: 3;
+    }
+
+    .section2 {
+        margin: 0;
+        height: 100%;
+    }
 
 }

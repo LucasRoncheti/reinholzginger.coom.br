@@ -214,7 +214,9 @@ nav div:hover {
 }
 
     @media screen and (max-width: 1400px) {
-
+        .containerContent{
+            height: 120%;
+        }
         .textProdutos {
             width: 70%;
         }
@@ -226,11 +228,21 @@ nav div:hover {
         .containerHeader {
             width: 80%;
         }
+
+        .section{
+            height: 150%;
+        }
     }
 
 
         @media screen and (max-width: 800px) {
 
+            .containerContent{
+                height: 100%;
+            }
+            .section{
+                height: 100%;
+            }
             .imgProdutos img {
                 margin-top: 40%;
                 height: auto;
@@ -306,7 +318,7 @@ nav div:hover {
 
             .textProdutos {
                 width: 100%;
-                height: 90%;
+                height: 80%;
 
             }
 

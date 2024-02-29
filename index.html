@@ -195,23 +195,28 @@
                 </div>
                 <div class="anotherDiv"></div>
             </div>
-
-            <div id="contact" class="formContact">
+         
+            <form id="contact" class="formContact">
                 <div class="inputArea">
-                    <input type="text" placeholder="Nome">
+                    <input type="text" id="name" name="name" placeholder="Nome">
                 </div>
-
+        
                 <div class="inputArea">
-                    <input type="email" placeholder="E-mail">
+                    <input type="email" id="email" name="email" placeholder="E-mail">
                 </div>
-
-                <div class="textArea ">
-                    <textarea placeholder="Seu texto aqui" name="" id="" cols="30" rows="10"></textarea>
-
-
-                    <div class="sendButton"><img src="src/img/Repetição de grade 1.svg" alt=""></div>
+        
+                <div class="textArea">
+                    <textarea id="message" name="message" placeholder="Seu texto aqui" cols="30" rows="10"></textarea>
                 </div>
-            </div>
+        
+                <div class="sendButton">
+                    <button style="background-color: transparent;width: 100%;height: 100%;" type="button" id="submitBtn"><img src="src/img/Repetição de grade 1.svg" alt=""></button>
+                </div>
+            </form>
+
+
+     
+       
 
         </div>
     </section>
@@ -290,7 +295,7 @@
 
             <div class="sliceFooter">
                 <h3>Nossas Redes Sociais</h3>
-                <img class="imgLogoInstagram" src="src/img/instagramLogo.svg" alt="">
+                <a href="https://www.instagram.com/reinholzginger/"><img class="imgLogoInstagram" src="src/img/instagramLogo.svg" alt=""></a>
             </div>
 
         </div>
@@ -309,3 +314,4 @@
 
 <script src="features/js/mainSlide.js"></script>
 <script src="features/js/mobileMenu.js"></script>
+<script src="eng/features/js/sendMail.js"></script>

@@ -59,56 +59,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 let textMain = () => {
-  const textSign = document.getElementById("textSign")
-  let textMain = document.getElementById('textMain')
-  let textInside = document.getElementById('textInside')
-
+  const textSign = document.getElementById("textSign");
+  let textMain = document.getElementById('textMain');
+  let textInside = document.getElementById('textInside');
 
   switch (currentSlide) {
     case 0:
-      textSign.classList.add("orange", "toRight")
-      textSign.classList.remove("green", "toLeft")
+      textSign.classList.add("orange", "toRight");
+      textSign.classList.remove("green", "toLeft");
       textInside.innerHTML = `
-      <h2>Do Brasil para o Mundo:</h2>
-      <p>Oferecemos gengibre de alta qualidade,
-          cultivado com cuidado e dedicação
-          em solo brasileiro.</p>
-      `
-
-      break
+      <h2>From Brazil to the World:</h2>
+      <p>We offer high-quality ginger,
+          cultivated with care and dedication
+          in Brazilian soil.</p>
+      `;
+      break;
 
     case 1:
-
-      textSign.classList.add("green", "toLeft")
-      textSign.classList.remove("orange", "toRight")
+      textSign.classList.add("green", "toLeft");
+      textSign.classList.remove("orange", "toRight");
       if(larguraDaTela <= 800){
-        textMain.style.left = "0px"
+        textMain.style.left = "0px";
       }else{
-        textMain.style.left = "40%"
+        textMain.style.left = "40%";
       }
-     
-
       textInside.innerHTML = `
-      <h2>Nossa empresa é sua
-      conexão global com 
-      gengibre Premium</h2>
-      <p>Comprometida com a excelência em exportação 
-      e qualidade em cada entrega.</p>
-      `
-      break
+      <h2>Our company is your
+      global connection to
+      Premium ginger</h2>
+      <p>Committed to excellence in exportation
+      and quality in every delivery.</p>
+      `;
+      break;
 
     case 2:
-
-      textSign.classList.add("orange",)
-      textSign.classList.remove("green", "toLeft", "toRight")
-      textMain.style.left = "0px"
+      textSign.classList.add("orange");
+      textSign.classList.remove("green", "toLeft", "toRight");
+      textMain.style.left = "0px";
       textInside.innerHTML = `
-        <h2>Sabor Brasileiro que 
-        atravessa fronteiras</h2>
-        <p>Exportamos gengibre fresco, proporcionando um 
-        toque único e saudável às cozinhas internacionais.</p>
-        `
-      break
+        <h2>Brazilian Flavor that
+        crosses borders</h2>
+        <p>We export fresh ginger, providing a
+        unique and healthy touch to international kitchens.</p>
+        `;
+      break;
   }
-
 }

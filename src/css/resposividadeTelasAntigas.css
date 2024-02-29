@@ -2,11 +2,30 @@
 
 
     .formContact {
-        height: 60%;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
     }
 
     .textArea {
         height: 50%;
+
+        justify-content: center;
+    }
+
+    .formContact input {
+        margin: 5px 0;
+    }
+
+    .formContact textarea {
+        width: 63%;
+        margin: 5px 0;
+        height: 90%;
+    }
+
+    .sendButton {
+        width: 50%;
+        height: 40px;
     }
 
     .map img {
@@ -16,7 +35,7 @@
 
     .containerTextFourthPage p {
         width: 100%;
-      
+
     }
 
     .leftBox img {
@@ -30,7 +49,5 @@
 
 
 
-    
+
 }
-
-

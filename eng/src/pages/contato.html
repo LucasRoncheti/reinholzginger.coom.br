@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../src/css/root.css">
-    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../../../src/css/contato.css">
     <link rel="stylesheet" href="../../src/css/footer.css">
 
     <link rel="stylesheet" href="../css/headerMobile.css">
@@ -24,18 +24,18 @@
                         <div>HOME</div>
                     </a>
                     <a href="institucional.html">
-                        <div>INSTITUCIONAL</div>
+                        <div>ABOUT US</div>
                     </a>
 
                     <a href="produtos.html">
-                        <div>PRODUTOS</div>
+                        <div>PRODUCTS</div>
                     </a>
 
                     <a href="expotacao.html">
-                        <div>EXPORTAÇÃO</div>
+                        <div>EXPORT</div>
                     </a>
                     <a href="contato.html">
-                        <div>CONTATO</div>
+                        <div>CONTACT</div>
                     </a>
                  
                 </nav>
@@ -49,18 +49,18 @@
                     <div>HOME</div>
                 </a>
                 <a href="institucional.html">
-                    <div>INSTITUCIONAL</div>
+                    <div>ABOUT US</div>
                 </a>
 
                 <a href="produtos.html">
-                    <div>PRODUTOS</div>
+                    <div>PRODUCTS</div>
                 </a>
 
                 <a href="expotacao.html">
-                    <div>EXPORTAÇÃO</div>
+                    <div>EXPORT</div>
                 </a>
                 <a href="contato.html">
-                    <div>CONTATO</div>
+                    <div>CONTACT</div>
                 </a>
                 
             </nav>
@@ -69,11 +69,11 @@
         <div class="headerMobile">
             <div >
               </div>
-            <div onclick="fadeAnimation()"><img src="../img/Icon ionic-ios-menu.svg" alt="MenuMobile"></div>
+            <div onclick="fadeAnimation()"><img src="../img/Icon ionic-ios-menu.svg" alt="Mobile Menu"></div>
         </div>
 
         <div class="imgProdutos">
-            <img src="../img/fundoContato.png" alt="Imagem de vários meios de transporte plano de fundo">
+            <img src="../img/fundoContato.png" alt="Image of various means of transportation background">
         </div>
 
         <div class="containerContent">
@@ -84,32 +84,72 @@
                 <div class="textContact">
                     <span></span>
                     <div class="containerTextForm">
-                        <h2>Estamos aqui para ouvir você!</h2>
+                        <h2>We are here to listen to you!</h2>
                         <p>
-                            Entre em contato conosco para parcerias, consultas ou qualquer outra questão.
-                            <br>Sua mensagem é importante para nós.
+                            Get in touch with us for partnerships, inquiries, or any other matter.
+                            <br>Your message is important to us.
     
                         </p>
                     </div>
                     <div class="anotherDiv"></div>
                 </div>
-    
-                <div id="contact" class="formContact">
+
+                  <form id="contact" class="formContact">
                     <div class="inputArea">
-                        <input type="text" placeholder="Nome">
+                        <input type="text" id="nameInput" placeholder="Nome">
                     </div>
-    
+
                     <div class="inputArea">
-                        <input type="email" placeholder="E-mail">
+                        <input type="email" id="emailInput" placeholder="E-mail">
                     </div>
-    
-                    <div class="textArea ">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-    
-    
-                        <div class="sendButton"><img src="../../src/img/Repetição de grade 1.svg" alt=""></div>
+
+                    <div class="textArea">
+                        <textarea id="messageTextarea" cols="30" rows="10" placeholder="Seu texto aqui"></textarea>
                     </div>
-                </div>
+
+                    <div id="submitBtnContato" class="sendButton">
+                        <div ><img src="../../src/img/Repetição de grade 1.svg" alt=""></div>
+                    </div>
+                </form>
+
+                <script>
+                    /// para a página contato 
+
+                    document.getElementById("submitBtnContato").addEventListener("click", function () {
+                        // Validação do formulário
+                        var name = document.getElementById("nameInput").value.trim();
+                        var email = document.getElementById("emailInput").value.trim();
+                        var message = document.getElementById("messageTextarea").value.trim();
+
+                        // Expressão regular para validar o formato do e-mail
+                        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                        if (name === "" || !emailRegex.test(email) || message === "") {
+                            alert("Please fill out all fields correctly.");
+                            return; // Impede o envio do formulário se os campos estiverem vazios ou o e-mail estiver em um formato inválido
+                        }
+
+                        // Dados do formulário
+                        var formData = new FormData();
+                        formData.append("name", name);
+                        formData.append("email", email);
+                        formData.append("message", message);
+
+                        // Envia os dados para o PHP
+                        fetch("../../includes/send_email.php", {
+                                method: "POST",
+                                body: formData
+                            })
+                            .then(response => response.text())
+                            .then(data => {
+                                alert(data); // Exibe o resultado do envio do formulário
+                            })
+                            .catch(error => {
+                                console.error("Erro ao enviar formulário:", error);
+                            });
+                    });
+                </script>
+    
     
             </div>
 
@@ -129,7 +169,7 @@
             <div class=" endereco sliceFooter">
                 <p>
                     AE Zona Rural, 00, Galo - 29260-000
-                    Domingos Martins - ES - Brasil
+                    Domingos Martins - ES - Brazil
                 </p>
                 <p>
                     <strong>+55 27 99800-4307</strong>
@@ -147,10 +187,10 @@
             <div class="sliceFooter">
                 <ul>
                     <a href="../pages/institucional.html">
-                        <li>Nossa História</li><br>
+                        <li>Our History</li><br>
                     </a>
                     <a href="../pages/produtos.html">
-                        <li>Produtos</li>
+                        <li>Products</li>
                     </a>
                 </ul>
             </div>
@@ -159,10 +199,10 @@
             <div class="sliceFooter">
                 <ul>
                     <a href="../pages/expotacao.html">
-                        <li>Exportação</li><br>
+                        <li>Export</li><br>
                     </a>
                     <a href="../pages/contato.html">
-                        <li>Contato</li>
+                        <li>Contact</li>
                     </a>
                 </ul>
 
@@ -171,7 +211,7 @@
             <div class=" sliceFooter">
                 <ul>
                     <a href="../pages/produtos.html">
-                        <li>Gengibre</li>
+                        <li>Ginger</li>
                     </a>
 
                 </ul>
@@ -181,26 +221,26 @@
             <div class=" marginSlicer sliceFooter">
                 <ul>
                     <a href="../pages/contato.html">
-                        <li>Fale Conosco</li><br>
+                        <li>Contact Us</li><br>
                     </a>
                     <a href="https://drive.google.com/drive/folders/19vuwGiZQyfwmaQ5qNxH2wKILzxVKoBmi?usp=sharing">
-                        <li>Identidade Visual</li>
+                        <li>Visual Identity</li>
                     </a>
                 </ul>
 
             </div>
 
             <div class="sliceFooter">
-                <h3>Nossas Redes Sociais</h3>
-                <img class="imgLogoInstagram" src="src/img/instagramLogo.svg" alt="">
+                <h3>Our Social Media</h3>
+                <a href="https://www.instagram.com/reinholzginger/"><img class="imgLogoInstagram" src="../img/instagramLogo.svg" alt=""></a>
             </div>
 
         </div>
 
         <div class="footer">
             <p>
-                Todos os Direitos Reservados - Reinholz Ginger Comércio de Raízes LTDA <br>
-                Desenvolvido por <a href="#">Lucas Roncheti Design && Code</a>
+                All Rights Reserved - Reinholz Ginger Comércio de Raízes LTDA <br>
+                Developed by <a href="#">Lucas Roncheti Design && Code</a>
 
             </p>
         </div>
