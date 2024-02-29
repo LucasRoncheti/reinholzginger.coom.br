@@ -1,0 +1,124 @@
+footer {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+
+
+
+
+.imgFaixaFooter {
+    width: 100%;
+}
+
+.containerLIstFooter {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliceFooter {
+
+    width: calc(1400px / 7);
+    height: 50%;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 5px;
+    font-size: 0.9em;
+    position: relative;
+}
+.none{
+    display: block;
+}
+.sliceFooter ul{
+    list-style: none;
+}
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--cor01);
+}
+
+.imgLogoInstagram{
+    width: 30px;
+    position: absolute;
+    top: 40px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.sliceFooter a{
+    color: black;
+}
+
+
+
+
+@media screen and (max-width: 1400px) {
+    .containerLIstFooter{
+        width: 80%;
+    }
+
+    .imgLogoInstagram{
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .containerLIstFooter{
+        flex-direction: column;
+        height: 70vh;
+        font-size: 1.2em;
+    }
+    .sliceFooter{
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        height: 100%;
+
+    }
+
+    .none{
+        display: none;
+    }
+
+    .imgLogoInstagram{
+        top: 35%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 100px;
+        background-color: var(--cor01);
+        font-size: 0.9em;
+        padding: 10px;
+        
+    }
+    .endereco{
+        height: 150%;
+        margin-bottom: 20%;
+    }
+    .marginSlicer{
+        margin-top: -10%;
+    }
+
+    
+}

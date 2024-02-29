@@ -1,0 +1,303 @@
+/*the fourth page starts here */
+
+.fouthSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upSection {
+    width: 100%;
+    height: 50%;
+    background-color: var(--cor01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.map {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.rightBoxFourthPage {
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.containerTextFourthPage {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+
+}
+
+.containerTextFourthPage span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco);
+}
+
+.containerTextFourthPage p {
+    width: 700px;
+    font-size: var(--fontParagraph);
+    color: var(--branco);
+}
+
+.containerTextFourthPage a {
+    width: 140px;
+    height: 35px;
+    border: solid 2px var(--branco);
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 1.3em;
+    color: var(--branco);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+
+.containerTextFourthPage a:hover {
+    background-color: var(--cor02);
+
+}
+
+.downSection {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textContact {
+    width: 50%;
+    height: 50%;
+
+    text-align: right;
+
+    display: flex;
+
+
+    flex-direction: column;
+    align-items: right;
+}
+
+
+.anotherDiv {
+    height: 50%;
+}
+
+
+.textContact span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cor04);
+    display: block;
+}
+
+.textContact h2 {
+    font-size: 2em;
+    margin: 5px 0px 5px 0px;
+
+}
+
+.textContact p {
+
+    font-size: var(--fontParagraph);
+
+}
+
+
+.formContact {
+    width: 50%;
+    height: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+
+
+.inputArea {
+    width: 70%;
+    margin-left: 10px;
+}
+
+.formContact input {
+    width: 100%;
+    height: 30px;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+    padding: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
+.textArea {
+    display: flex;
+
+    width: 100%;
+
+}
+
+.formContact textarea {
+    width: 64%;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+    margin: 0% 1% 0% 10px;
+
+    padding: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+
+.sendButton {
+    width: 5%;
+    height: 100%;
+    border: solid 2px var(--cor04);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    background-color: var(--cor02);
+    transition: 0.4s;
+}
+
+
+
+/* portabilidade para mobile a partir daqui */
+
+@media screen and (max-width:800px) {
+
+
+
+    .fouthSection {
+        height: 200vh;
+    }
+
+    .upSection {
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+        height: 40%;
+    }
+
+    .map img {
+        width: 100%;
+        margin-top: 20%;
+    }
+
+    .containerTextFourthPage p{
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .rightBoxFourthPage{
+        width: 90%;
+        text-align: center;
+        height: 50%;
+        margin-top: 30px;
+     
+    }
+
+
+    .containerTextFourthPage a {
+        margin: 10px  auto;
+    }
+    
+
+    .downSection{
+        flex-direction: column;
+     
+    }
+    .textContact{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        height: 30%;
+    }
+    .textContact h2 {
+        font-size: 1.5em;
+        margin: 3% 0;
+    }
+    .textContact p {
+        font-size: 1.18em;
+    }
+
+    .anotherDiv{
+        display: none;
+    }
+
+    .formContact{
+        width: 100%;
+        align-items: center;
+        height: 20%;
+    }
+
+    .inputArea{
+        width: 90%;
+        height: 20%;
+        margin-left: 0;
+
+    }
+
+    .inputArea input{
+        height: 80%;
+    }
+    .textArea{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .formContact textarea {
+        width:90%;
+        margin-left: 0;
+        margin: auto;
+    }
+    .sendButton{
+        width: 90%;
+        margin-left: 0;
+        margin-top: 5%;
+        height: 20%;
+        background-color: var(--cor01);
+    }
+
+    .imgFaixaFooter{
+        height: 10%;
+    }
+}

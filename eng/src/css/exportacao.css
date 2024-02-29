@@ -229,102 +229,102 @@ nav div:hover {
     }
 
 
-    @media screen and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
 
-        .imgProdutos img {
-            margin-top: 40%;
-            height: auto;
-           
+            .imgProdutos img {
+                margin-top: 40%;
+                height: auto;
+               
+            }
+
+            .imgProdutos h2 {
+                text-align: center;
+                width: 100%;
+                font-size: 1.5em;
+                position: absolute;
+                bottom: 20%;
+             
+            }
+
+            .containerHeaderMobile {
+                position: absolute;
+                width: 100%;
+                height: 300px;
+                z-index: 20;
+                margin-top: 40px;
+
+                backdrop-filter: blur(02px);
+                -webkit-backdrop-filter: blur(02px);
+
+            }
+
+            .navMobile {
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+                background-color: rgba(207, 207, 207, 0.88);
+                border-radius: 0 0 20px 20px;
+                backdrop-filter: blur(02px);
+                -webkit-backdrop-filter: blur(02px);
+            }
+
+            .containerHeaderMobile a {
+                width: 35%;
+                height: 20%;
+                margin: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                background-color: var(--cor01);
+                color: white;
+                box-shadow: var(--boxShadow);
+                border-radius: 10px;
+            }
+
+            .containerHeader,
+            .containerImg {
+                display: none;
+            }
+
+            .containerImgMobile {
+                display: block;
+            }
+
+            header{
+                display: none;
+            }
+            .section {
+                height: 150%;
+            }
+
+            .imgProdutos {
+                /* margin-top: 200px; */
+                /* margin-bottom: 100px; */
+                position: relative;
+            }
+
+            .textProdutos {
+                width: 100%;
+                height: 90%;
+
+            }
+
+            .textProdutos p {
+                margin-top: 300px;
+                width: 95%;
+                height: 100vh;
+            }
+
+            .containerContent {
+                position: relative;
+
+            }
+
+            .exportacao {
+                display: block;
+                position: absolute;
+                color: white;
+                text-shadow: var(--textShadow)
+            }
         }
-
-        .imgProdutos h2 {
-            text-align: center;
-            width: 100%;
-            font-size: 1.5em;
-            position: absolute;
-            bottom: 20%;
-         
-        }
-
-        .containerHeaderMobile {
-            position: absolute;
-            width: 100%;
-            height: 300px;
-            z-index: 20;
-            margin-top: 40px;
-
-            backdrop-filter: blur(02px);
-            -webkit-backdrop-filter: blur(02px);
-
-        }
-
-        .navMobile {
-            width: 100%;
-            height: 100%;
-            flex-wrap: wrap;
-            background-color: rgba(207, 207, 207, 0.88);
-            border-radius: 0 0 20px 20px;
-            backdrop-filter: blur(02px);
-            -webkit-backdrop-filter: blur(02px);
-        }
-
-        .containerHeaderMobile a {
-            width: 35%;
-            height: 20%;
-            margin: 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            background-color: var(--cor01);
-            color: white;
-            box-shadow: var(--boxShadow);
-            border-radius: 10px;
-        }
-
-        .containerHeader,
-        .containerImg {
-            display: none;
-        }
-
-        .containerImgMobile {
-            display: block;
-        }
-
-        header{
-            display: none;
-        }
-        .section {
-            height: 150%;
-        }
-
-        .imgProdutos {
-            /* margin-top: 200px; */
-            /* margin-bottom: 100px; */
-            position: relative;
-        }
-
-        .textProdutos {
-            width: 100%;
-            height: 90%;
-
-        }
-
-        .textProdutos p {
-            margin-top: 300px;
-            width: 95%;
-            height: 100vh;
-        }
-
-        .containerContent {
-            position: relative;
-
-        }
-
-        .exportacao {
-            display: block;
-            position: absolute;
-            color: white;
-            text-shadow: var(--textShadow)
-        }
-    }

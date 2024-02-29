@@ -1,0 +1,123 @@
+.thirthSection {
+    background: rgb(156, 59, 32);
+    background: -moz-linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    background: -webkit-linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    background: linear-gradient(236deg, rgba(156, 59, 32, 1) 0%, rgba(229, 89, 51, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9c3b20", endColorstr="#e55933", GradientType=1);
+
+    overflow: hidden;
+}
+
+.containerDivs {
+    width: 100%;
+    height: 70%;
+    display: flex;
+
+}
+
+.containerDivs div {
+    width: 100%;
+}
+
+
+
+.inferiorDiv img {
+    width: 80%;
+    max-width: 1600px;
+
+
+}
+.inferiorDiv img:nth-child(2){
+    display: none;
+}
+
+.inferiorDiv {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.contentThirdthSection {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+    text-shadow: var(--textShadow);
+    text-align: center;
+}
+
+
+
+.h2TextSection3{
+ font-size: var(--fontH2);
+ margin-bottom: 3%;
+}
+
+.pTextSection3{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+.containerPhoto {
+    width: 50%;
+    max-width: 1000px;
+    min-width: 500px;
+    position: absolute;
+    top: -200px;
+    animation: moveContainer 14s ease-in-out infinite;
+}
+
+@keyframes moveContainer{
+    0%{
+        top: -200px;
+    }
+    50%{
+        top: -50px;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+   
+    .h2TextSection3{
+        font-size: 1.9em;
+    }
+    .pTextSection3{
+        font-size: 1.1em;
+    }
+    .containerPhoto{
+        top: -100px;
+    }
+
+    .containerDivs{
+        height: 40%;
+    }
+
+    .inferiorDiv{
+        height: 50%;
+    }
+    .inferiorDiv img:nth-child(1){
+        display: none;
+    }
+    .inferiorDiv img:nth-child(2){
+        display: block;
+        height: 100%;
+    }
+        
+    @keyframes moveContainer{
+        0%{
+            top: -100px;
+        }
+        50%{
+            top: -0px;
+        }}
+}

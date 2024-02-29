@@ -19,28 +19,24 @@ let fadeAnimation = () =>{
   
 }
 
-
-// mudança de ingles para portugues desktop
-
-
 let espera  =  1000
 
 const botao = document.getElementById("parteInternaBotao")
 
-let condicionalLenguage = true
+let condicionalLenguage = false
 let mudarLinguagem = () =>{
     if(condicionalLenguage){
         botao.classList.add("toLeftButton")
         botao.classList.remove("toRightButton")
   
-        condicionalLenguage = false
+        condicionalLenguage = true
         setTimeout(traducao,espera)
         
     }else{
         botao.classList.remove("toLeftButton")
         botao.classList.add("toRightButton")
       
-        condicionalLenguage = true
+        condicionalLenguage = false
         setTimeout(traducao,espera)
     }
 }
@@ -50,13 +46,13 @@ let mudarLinguagem = () =>{
 
 const botaoMobile = document.getElementById("parteInternaBotaoMobile")
 
-let condicionalLenguageMobile = true
+let condicionalLenguageMobile = false
 let mudarLinguagemMobile = () =>{
     if(condicionalLenguageMobile){
         botaoMobile.classList.add("toLeftButtonMobile")
         botaoMobile.classList.remove("toRightButtonMobile")
      
-        condicionalLenguageMobile = false
+        condicionalLenguageMobile = true
 
 
 
@@ -67,14 +63,14 @@ let mudarLinguagemMobile = () =>{
         botaoMobile.classList.remove("toLeftButtonMobile")
         botaoMobile.classList.add("toRightButtonMobile")
 
-        condicionalLenguageMobile = true
+        condicionalLenguageMobile = false
         setTimeout(traducao,espera)
     }
 }
 
 
 let traducao = () =>{
-    var url = '../../eng/index.html'
+    var url = '../../../index.html'
  
     window.location.href = url
 }
