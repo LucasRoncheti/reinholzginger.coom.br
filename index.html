@@ -40,15 +40,52 @@
                     <a href="#downSection">
                         <div>CONTATO</div>
                     </a>
-                    <div>PT-ENG</div>
+                    <div id="botaoLenguage" class="botaoLenguage">
+                        <div  onclick="mudarLinguagemMobile()"  id="parteInternaBotaoMobile" class="parteInternaBotaoMobile"></div>
+                        <img onclick="mudarLinguagemMobile()" src="src/img/pt.png" alt="Botão bandeira brasil"><img onclick="mudarLinguagemMobile()" src="src/img/eng.png" alt="Botão bandeira eng">
+                    </div>
                 </nav>
+             
             </div>
+
+        
         </header>
+        <div id="containerHeaderMobile" class="containerHeaderMobile">
+           
+            <nav class="navMobile">
+                <a href="index.html">
+                    <div>HOME</div>
+                </a>
+                <a href="src/pages/institucional.html">
+                    <div>INSTITUCIONAL</div>
+                </a>
+
+                <a href="src/pages/produtos.html">
+                    <div>PRODUTOS</div>
+                </a>
+
+                <a href="src/pages/expotacao.html">
+                    <div>EXPORTAÇÃO</div>
+                </a>
+                <a href="#downSection">
+                    <div>CONTATO</div>
+                </a>
+                
+            </nav>
+        </div>
 
         <div class="headerMobile">
-            <div>pt-eng</div>
-            <div><img src="src/img/Icon ionic-ios-menu.svg" alt="MenuMobile"></div>
+            <div id="botaoLenguage" class="botaoLenguage">
+                <div  onclick="mudarLinguagem()"  id="parteInternaBotao" class="parteInternaBotao"></div>
+                <img onclick="mudarLinguagem()" src="src/img/pt.png" alt="Botão bandeira brasil"><img onclick="mudarLinguagem()" src="src/img/eng.png" alt="Botão bandeira eng">
+            </div>
+            <div onclick="fadeAnimation()"><img src="src/img/Icon ionic-ios-menu.svg" alt="MenuMobile"></div>
         </div>
+
+
+        <img class="imagemLogoMobile" src="src/img/logoWhiteTransp.png" alt="Logo Reinholz Ginger">
+
+        
         <div class="containerSlider">
             <div id="textSign" class="textSign orange">
 
@@ -169,7 +206,7 @@
                 </div>
 
                 <div class="textArea ">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="Seu texto aqui" name="" id="" cols="30" rows="10"></textarea>
 
 
                     <div class="sendButton"><img src="src/img/Repetição de grade 1.svg" alt=""></div>
@@ -187,7 +224,7 @@
 
         <div class="containerLIstFooter">
 
-            <div class="sliceFooter">
+            <div class=" endereco sliceFooter">
                 <p>
                     AE Zona Rural, 00, Galo - 29260-000
                     Domingos Martins - ES - Brasil
@@ -201,38 +238,52 @@
                 </p>
             </div>
 
-            <div class="sliceFooter">
+            <div class=" none sliceFooter">
 
             </div>
 
             <div class="sliceFooter">
                 <ul>
-                    <li>Nossa História</li><br>
-                    <li>Produtos</li>
+                    <a href="src/pages/institucional.html">
+                        <li>Nossa História</li><br>
+                    </a>
+                    <a href="src/pages/produtos.html">
+                        <li>Produtos</li>
+                    </a>
                 </ul>
             </div>
 
 
             <div class="sliceFooter">
                 <ul>
-                    <li>Exportação</li><br>
-                    <li>Contato</li>
+                    <a href="src/pages/expotacao.html">
+                        <li>Exportação</li><br>
+                    </a>
+                    <a href="#downSection">
+                        <li>Contato</li>
+                    </a>
                 </ul>
 
             </div>
 
-            <div class="sliceFooter">
+            <div class=" sliceFooter">
                 <ul>
-                    <li>Gengibre</li>
+                    <a href="src/pages/produtos.html">
+                        <li>Gengibre</li>
+                    </a>
 
                 </ul>
 
             </div>
 
-            <div class="sliceFooter">
+            <div class=" marginSlicer sliceFooter">
                 <ul>
-                    <li>Fale Conosco</li><br>
-                    <li>Identidade Visual</li>
+                    <a href="src/pages/contato.html">
+                        <li>Fale Conosco</li><br>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/19vuwGiZQyfwmaQ5qNxH2wKILzxVKoBmi?usp=sharing">
+                        <li>Identidade Visual</li>
+                    </a>
                 </ul>
 
             </div>
@@ -247,7 +298,7 @@
         <div class="footer">
             <p>
                 Todos os Direitos Reservados - Reinholz Ginger Comércio de Raízes LTDA <br>
-                Desenvolvido por <a href="#">Lucas Roncheti Design && Code</a>
+                Desenvolvido por <a href="https://lucasrd.site/">Lucas Roncheti Design && Code</a>
 
             </p>
         </div>
@@ -257,3 +308,4 @@
 </html>
 
 <script src="features/js/mainSlide.js"></script>
+<script src="features/js/mobileMenu.js"></script>

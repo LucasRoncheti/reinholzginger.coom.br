@@ -4,14 +4,13 @@
 header {
     width: 100%;
     height: 180px;
-
     position: absolute;
     z-index: 4;
-
+    background-color: rgba(0, 0, 0, 0.173);
 }
 
 .containerHeader {
-    width: 1600px;
+    width: 80%;
     height: 100%;
 
     margin: auto;
@@ -21,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+
 
 }
 
@@ -58,16 +58,19 @@ nav div:hover {
     color: white;
     text-shadow: 2px 2px 2px black;
 }
+.exportacao{
+    display: none;
+}
 
 .containerContent {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    top: 0;
 }
 
 .imgProdutos {
@@ -80,10 +83,11 @@ nav div:hover {
 
 
 }
-
 .imgProdutos img {
 
-width: 100%;
+    width: 100%;
+
+
 }
 
 .textProdutos {
@@ -106,10 +110,215 @@ width: 100%;
 }
 
 
-@media screen and (max-width: 1400px) {
-    .section{
-        margin-bottom: 200px;
+
+
+.botaoLenguage{
+    min-width: 70px;
+    height: 25px;
+    background-color:rgb(244, 244, 244);
+    border: solid 2px rgb(61, 58, 58);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.parteInternaBotao{
+    width: 50%;
+    height: 100%;
+    background-color:rgb(60, 204, 20) ;
+    box-shadow: 2px 2px 3px rgb(128, 255, 0);
+    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: 2.5%;
+}
+
+.toLeftButton{
+    animation: toLeftButton 0.5s  ease-in-out forwards;
+}
+.toRightButton{
+    animation: toRightButton 0.5s  ease-in-out forwards;
+}
+
+@keyframes toLeftButton{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes toRightButton{
+    0%{
+        left: 50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.botaoLenguage img:nth-child(2){
+    height: 95%;
+    position: absolute;
+    left: 2.5%;
+    
+}
+.botaoLenguage img:nth-child(3){
+    height: 95%;
+    position: absolute;
+    right: 2.5%;
+}
+
+.containerHeaderMobile{
+    display: none;
+  }
+  .fadeIn{
+    display: block;
+    animation: fadeInMenu 0.3s ease-in-out forwards;
+  }
+
+  .fadeOut{
+   
+    animation: fadeOutMenu 0.3s ease-in-out forwards;
+  }
+
+  
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        /* Começa e termina com opacidade 0 */
     }
 
- 
+    100% {
+        opacity: 1;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
 }
+
+  
+@keyframes fadeOutMenu {
+    0% {
+        opacity: 1;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 0;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+    @media screen and (max-width: 1400px) {
+
+        .textProdutos {
+            width: 70%;
+        }
+
+        .textInstitucional {
+            margin-left: 3%;
+        }
+
+        .containerHeader {
+            width: 80%;
+        }
+    }
+
+
+        @media screen and (max-width: 800px) {
+
+            .imgProdutos img {
+                margin-top: 40px;
+                height: 100%;
+            }
+
+            .imgProdutos h2 {
+                text-align: center;
+                width: 100%;
+                font-size: 1.5em;
+            }
+
+            .containerHeaderMobile {
+                position: absolute;
+                width: 100%;
+                height: 300px;
+                z-index: 20;
+                margin-top: 40px;
+
+                backdrop-filter: blur(02px);
+                -webkit-backdrop-filter: blur(02px);
+
+            }
+
+            .navMobile {
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+                background-color: rgba(207, 207, 207, 0.88);
+                border-radius: 0 0 20px 20px;
+                backdrop-filter: blur(02px);
+                -webkit-backdrop-filter: blur(02px);
+            }
+
+            .containerHeaderMobile a {
+                width: 35%;
+                height: 20%;
+                margin: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                background-color: var(--cor01);
+                color: white;
+                box-shadow: var(--boxShadow);
+                border-radius: 10px;
+            }
+
+            .containerHeader,
+            .containerImg {
+                display: none;
+            }
+
+            .containerImgMobile {
+                display: block;
+            }
+
+
+            .section {
+                height: 160%;
+            }
+
+            .imgProdutos {
+                /* margin-top: 200px; */
+                /* margin-bottom: 100px; */
+            }
+
+            .textProdutos {
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .textProdutos p {
+                margin-top: -150px;
+                width: 95%;
+                height: 100vh;
+
+            }
+
+            .containerContent {
+                position: relative;
+
+            }
+
+            .exportacao {
+                display: block;
+                position: absolute;
+                color: white;
+                text-shadow: var(--textShadow)
+            }
+        }

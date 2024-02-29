@@ -131,7 +131,7 @@
 
 .formContact {
     width: 50%;
-    height: 52%;
+    height: 58%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -196,7 +196,7 @@
 
 /* portabilidade para mobile a partir daqui */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:800px) {
 
 
 
@@ -215,19 +215,89 @@
 
     .map img {
         width: 100%;
+        margin-top: 20%;
     }
 
     .containerTextFourthPage p{
         width: 100%;
         text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .rightBoxFourthPage{
         width: 90%;
         text-align: center;
-        height: 40%;
+        height: 50%;
+        margin-top: 30px;
+     
     }
 
+
     .containerTextFourthPage a {
+        margin: 10px  auto;
+    }
+    
+
+    .downSection{
+        flex-direction: column;
+     
+    }
+    .textContact{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        height: 30%;
+    }
+    .textContact h2 {
+        font-size: 1.5em;
+        margin: 3% 0;
+    }
+    .textContact p {
+        font-size: 1.18em;
+    }
+
+    .anotherDiv{
+        display: none;
+    }
+
+    .formContact{
+        width: 100%;
+        align-items: center;
+        height: 20%;
+    }
+
+    .inputArea{
+        width: 90%;
+        height: 20%;
+        margin-left: 0;
+
+    }
+
+    .inputArea input{
+        height: 80%;
+    }
+    .textArea{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .formContact textarea {
+        width:90%;
+        margin-left: 0;
         margin: auto;
+    }
+    .sendButton{
+        width: 90%;
+        margin-left: 0;
+        margin-top: 5%;
+        height: 20%;
+        background-color: var(--cor01);
+    }
+
+    .imgFaixaFooter{
+        height: 10%;
     }
 }

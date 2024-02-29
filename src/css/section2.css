@@ -76,7 +76,7 @@
 
 /* portabilidade para mobile a partir daqui */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:800px){
     .containerTextSecondPage{
   
     }
@@ -97,5 +97,6 @@
     }
     .containerTextSecondPage p{
         width: 100%;
+        text-align: center;
     }
 }

@@ -10,7 +10,7 @@ header{
 }
 
 .containerHeader{
-    width: 1600px;
+    width: 80%;
     height: 100%;
 
     margin: auto;
@@ -132,4 +132,208 @@ padding: 10px;
     width: 100%;
     line-height: 1.5em;
 
+}
+
+
+
+.botaoLenguage{
+    min-width: 70px;
+    height: 25px;
+    background-color:rgb(244, 244, 244);
+    border: solid 2px rgb(61, 58, 58);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.parteInternaBotao{
+    width: 50%;
+    height: 100%;
+    background-color:rgb(60, 204, 20) ;
+    box-shadow: 2px 2px 3px rgb(128, 255, 0);
+    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: 2.5%;
+}
+
+.toLeftButton{
+    animation: toLeftButton 0.5s  ease-in-out forwards;
+}
+.toRightButton{
+    animation: toRightButton 0.5s  ease-in-out forwards;
+}
+
+@keyframes toLeftButton{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes toRightButton{
+    0%{
+        left: 50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.botaoLenguage img:nth-child(2){
+    height: 95%;
+    position: absolute;
+    left: 2.5%;
+    
+}
+.botaoLenguage img:nth-child(3){
+    height: 95%;
+    position: absolute;
+    right: 2.5%;
+}
+
+.containerHeaderMobile{
+    display: none;
+  }
+  .fadeIn{
+    display: block;
+    animation: fadeInMenu 0.3s ease-in-out forwards;
+  }
+
+  .fadeOut{
+   
+    animation: fadeOutMenu 0.3s ease-in-out forwards;
+  }
+
+  
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 1;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+  
+@keyframes fadeOutMenu {
+    0% {
+        opacity: 1;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 0;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .textProdutos {
+        width: 70%;
+    }
+
+    .textInstitucional {
+        margin-left: 3%;
+    }
+    .containerHeader{
+        width: 80%;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  
+   .imgProdutos img{
+    margin-top: 40px;
+    height: 100%;
+   }
+   .imgProdutos h2{
+    text-align: center;
+    width: 100%;
+        font-size: 1.5em;
+   }
+    .imagemLogoMobile{
+        display: block;
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%,80%);
+        z-index: 200;
+        mix-blend-mode: overlay;
+    }
+    .containerHeaderMobile{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 20;
+        margin-top: 40px;
+    }
+
+    .navMobile{
+        width: 100%;
+        height: 100%;
+        
+        flex-wrap: wrap;
+        background-color: rgba(207, 207, 207, 0.88);
+        border-radius: 0 0 20px 20px;
+        backdrop-filter:blur(02px);
+        -webkit-backdrop-filter:blur(02px);
+    }
+
+    .containerHeaderMobile  a {
+        width: 35%;
+        height: 20%;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--cor01);
+        color: white;
+        box-shadow: var(--boxShadow);
+        border-radius: 10px;
+    }
+
+    .containerHeader,.containerImg{
+        display: none;
+    }
+    .containerImgMobile{
+        display: block;
+    }
+
+    .textProdutos{
+        width: 100%;
+        height: 125%;
+        flex-direction: column;
+        justify-content: space-around;
+     
+       
+    }
+
+   .imgHistória{
+    width: 70%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+
+   .imgHistória img{
+    width: 100%;
+   }
+
+   .containerContent{
+    height: 200vh;
+   }
 }

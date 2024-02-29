@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const slides = document.querySelectorAll(".slide");
   const slidesMobile = document.querySelectorAll(".slideMobile");
-  if (larguraDaTela > 768) {
+  if (larguraDaTela > 800) {
 
     function showSlide() {
       slides.forEach((slide, index) => {
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide();
 
   // Define o setInterval após mostrar o primeiro slide
-  setInterval(showSlide, 7000); // Muda de slide a cada 7 segundos
+  setInterval(showSlide, 8000); // Muda de slide a cada 7 segundos
 });
 
 
@@ -81,7 +81,12 @@ let textMain = () => {
 
       textSign.classList.add("green", "toLeft")
       textSign.classList.remove("orange", "toRight")
-      textMain.style.left = "40%"
+      if(larguraDaTela <= 800){
+        textMain.style.left = "0px"
+      }else{
+        textMain.style.left = "40%"
+      }
+     
 
       textInside.innerHTML = `
       <h2>Nossa empresa é sua

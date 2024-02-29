@@ -21,7 +21,7 @@
 
 .containerImg img {
     width:100%;
-    height: auto;
+    height: 100%;
     position: absolute;
 }
 
@@ -43,7 +43,7 @@ header{
 }
 
 .containerHeader{
-    width: 1600px;
+    width: 80%;
     height: 100%;
 
     margin: auto;
@@ -55,7 +55,9 @@ header{
     padding: 5px;
 
 }
-
+.imagemLogoMobile{
+    display: none;
+}
 .containerHeader img{
     height: 80%;
 
@@ -96,16 +98,14 @@ nav div:hover{
 .green{
     background-color: var(--cor01);
     mix-blend-mode:multiply ;
-  
-   
 }
 
 .toLeft {
-    animation: moveLeft 7s ease-in-out infinite ;
+    animation: moveLeft var(--timeSlider) ease-in-out infinite ;
 }
 
 .toRight {
-animation: moveRight 7s ease-in-out infinite ;
+animation: moveRight var(--timeSlider) ease-in-out infinite ;
 }
 
 @keyframes moveRight{
@@ -128,18 +128,14 @@ animation: moveRight 7s ease-in-out infinite ;
 
 .textSign{
     
-   
-
     width: 56%;
     height: 487px;
     position: absolute;
     z-index: 5;
-
     top: 50%;
     transform: translateY(-30%);
     backdrop-filter:blur(02px) ;
     -webkit-backdrop-filter:blur(02px);
-    
 }
 
 
@@ -152,11 +148,11 @@ animation: moveRight 7s ease-in-out infinite ;
 
 
 @keyframes FadeInOut {
-    0%,10%, 70%,100% {
+    0%,5%, 90%,100% {
       opacity: 0; /* Começa e termina com opacidade 0 */
     }
     
-    20%,50%,60% {
+    10%,50%,80% {
       opacity: 1; /* Tem opacidade 1 na metade da animação */
     }
   }
@@ -242,9 +238,224 @@ animation: moveRight 7s ease-in-out infinite ;
     }
   }
 
+ .containerHeaderMobile{
+    display: none;
+  }
+  .fadeIn{
+    display: block;
+    animation: fadeInMenu 0.3s ease-in-out forwards;
+  }
+
+  .fadeOut{
+   
+    animation: fadeOutMenu 0.3s ease-in-out forwards;
+  }
+
+  
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 1;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+  
+@keyframes fadeOutMenu {
+    0% {
+        opacity: 1;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 0;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+
+.botaoLenguage{
+    min-width: 70px;
+    height: 25px;
+    background-color:rgb(244, 244, 244);
+    border: solid 2px rgb(61, 58, 58);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.parteInternaBotao{
+    width: 50%;
+    height: 100%;
+    background-color:rgb(60, 204, 20) ;
+    box-shadow: 2px 2px 3px rgb(128, 255, 0);
+    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: 2.5%;
+}
+
+.toLeftButton{
+    animation: toLeftButton 0.5s  ease-in-out forwards;
+}
+.toRightButton{
+    animation: toRightButton 0.5s  ease-in-out forwards;
+}
+
+@keyframes toLeftButton{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes toRightButton{
+    0%{
+        left: 50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+
+/*botão  de linguagem mobile*/
+.parteInternaBotaoMobile{
+    width: 70%;
+    height: 100%;
+    background-color:rgb(60, 204, 20) ;
+    box-shadow: 2px 2px 3px rgb(128, 255, 0);
+    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: -50%;
+}
+
+.toLeftButtonMobile{
+    animation: toLeftButtonMobile 0.5s  ease-in-out forwards;
+}
+.toRightButtonMobile{
+    animation: toRightButtonMobile 0.5s  ease-in-out forwards;
+}
+
+@keyframes toLeftButtonMobile{
+    0%{
+        left: -50%;
+    }
+    100%{
+        left: 20%;
+    }
+}
+
+@keyframes toRightButtonMobile{
+    0%{
+        left: 20%;
+    }
+    100%{
+        left: -50%;
+    }
+}
+/*//////////////////////////////////////////////////////////////////*/
+
+
+.botaoLenguage img:nth-child(2){
+    height: 95%;
+    position: absolute;
+    left: 2.5%;
+    
+}
+.botaoLenguage img:nth-child(3){
+    height: 95%;
+    position: absolute;
+    right: 2.5%;
+}
+
+
+
 /* portabilidade para mobile a partir daqui */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1400px){
+  
+ .containerImg img{
+    height: inherit;
+ }
+    .containerHeader {
+        width: 100%;
+        padding: 0% 5%;
+        position: relative;
+    }
+
+    .textSign,
+    .textMain {
+        height: 60%;
+    }
+
+    .textMain h2 {
+        font-size: 2.2em;
+    }
+
+    .textMain p {
+        font-size: 1.7em;
+    }
+
+}
+
+
+@media screen and (max-width:800px){
+
+    .imagemLogoMobile{
+        display: block;
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%,80%);
+        z-index: 200;
+        mix-blend-mode: overlay;
+    }
+    .containerHeaderMobile{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 20;
+        margin-top: 40px;
+    }
+
+    .navMobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(207, 207, 207, 0.88);
+        border-radius: 0 0 20px 20px;
+        backdrop-filter:blur(02px);
+        -webkit-backdrop-filter:blur(02px);
+   
+    }
+
+    .containerHeaderMobile  a {
+        width: 35%;
+        height: 20%;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--cor01);
+        color: white;
+        box-shadow: var(--boxShadow);
+        border-radius: 10px;
+    }
+
     .containerHeader,.containerImg{
         display: none;
     }
@@ -252,4 +463,54 @@ animation: moveRight 7s ease-in-out infinite ;
         display: block;
     }
 
+    .textMain h2 {
+        font-size: 1.8em;
+    }
+
+    .textMain p {
+        font-size: 1.3em;
+    }
+
+    .textSign{
+    
+        width: 100%;
+        height: 300px;
+        top: 50%;
+        transform: translateY(-100%);
+    }
+
+
+    @keyframes moveRight{
+        0%,70%{
+            left: 0%;
+        }
+        90%,100%{
+            left: 0%;
+        }
+    }
+    
+    @keyframes moveLeft{
+        0%,70%{
+            left: 0%;
+        }
+        90%,100%{
+            left: 0%;
+        }
+    }
+
+    .textMain{
+        width: 100%;
+        height: 300px;
+        top: 50%;
+        transform: translateY(-100%);
+        padding-left: 5%;
+    }
+
+    .textMain  p {
+        width: 90%;
+    }
+
+    .orange  {
+        mix-blend-mode: multiply;
+    }
 }

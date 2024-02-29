@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../css/institucional.css">
     <link rel="stylesheet" href="../../src/css/footer.css">
     <link rel="stylesheet" href="../css/resposividadeTelasAntigas.css">
+    <link rel="stylesheet" href="../css/headerMobile.css">
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
-    <title>Reinholz Ginger</title>
+    <title>Institucional</title>
 </head>
 
 <body>
@@ -35,10 +36,41 @@
                     <a href="contato.html">
                         <div>CONTATO</div>
                     </a>
-                    <div>PT-ENG</div>
+                 
                 </nav>
             </div>
         </header>
+
+        <div id="containerHeaderMobile" class="containerHeaderMobile">
+           
+            <nav class="navMobile">
+                <a href="../../index.html">
+                    <div>HOME</div>
+                </a>
+                <a href="institucional.html">
+                    <div>INSTITUCIONAL</div>
+                </a>
+
+                <a href="produtos.html">
+                    <div>PRODUTOS</div>
+                </a>
+
+                <a href="expotacao.html">
+                    <div>EXPORTAÇÃO</div>
+                </a>
+                <a href="contato.html">
+                    <div>CONTATO</div>
+                </a>
+                
+            </nav>
+        </div>
+
+        <div class="headerMobile">
+            <div >
+              </div>
+            <div onclick="fadeAnimation()"><img src="../img/Icon ionic-ios-menu.svg" alt="MenuMobile"></div>
+        </div>
+
 
         <div class="containerContent">
             <div class="imgProdutos">
@@ -117,8 +149,8 @@
                 </div>
         
                 <div class="containerLIstFooter">
-        
-                    <div class="sliceFooter">
+
+                    <div class=" endereco sliceFooter">
                         <p>
                             AE Zona Rural, 00, Galo - 29260-000
                             Domingos Martins - ES - Brasil
@@ -132,45 +164,59 @@
                         </p>
                     </div>
         
-                    <div class="sliceFooter">
+                    <div class=" none sliceFooter">
         
                     </div>
         
                     <div class="sliceFooter">
                         <ul>
-                            <li>Nossa História</li><br>
-                            <li>Produtos</li>
+                            <a href="../pages/institucional.html">
+                                <li>Nossa História</li><br>
+                            </a>
+                            <a href="../pages/produtos.html">
+                                <li>Produtos</li>
+                            </a>
                         </ul>
                     </div>
         
         
                     <div class="sliceFooter">
                         <ul>
-                            <li>Exportação</li><br>
-                            <li>Contato</li>
+                            <a href="../pages/expotacao.html">
+                                <li>Exportação</li><br>
+                            </a>
+                            <a href="../pages/contato.html">
+                                <li>Contato</li>
+                            </a>
                         </ul>
         
                     </div>
         
-                    <div class="sliceFooter">
+                    <div class=" sliceFooter">
                         <ul>
-                            <li>Gengibre</li>
+                            <a href="../pages/produtos.html">
+                                <li>Gengibre</li>
+                            </a>
         
                         </ul>
         
                     </div>
         
-                    <div class="sliceFooter">
+                    <div class=" marginSlicer sliceFooter">
                         <ul>
-                            <li>Fale Conosco</li><br>
-                            <li>Identidade Visual</li>
+                            <a href="../pages/contato.html">
+                                <li>Fale Conosco</li><br>
+                            </a>
+                            <a href="https://drive.google.com/drive/folders/19vuwGiZQyfwmaQ5qNxH2wKILzxVKoBmi?usp=sharing">
+                                <li>Identidade Visual</li>
+                            </a>
                         </ul>
         
                     </div>
         
                     <div class="sliceFooter">
                         <h3>Nossas Redes Sociais</h3>
-                        <img class="imgLogoInstagram" src="../../src/img/instagramLogo.svg" alt="">
+                        <img class="imgLogoInstagram" src="src/img/instagramLogo.svg" alt="">
                     </div>
         
                 </div>
@@ -178,7 +224,7 @@
                 <div class="footer">
                     <p>
                         Todos os Direitos Reservados - Reinholz Ginger Comércio de Raízes LTDA <br>
-                        Desenvolvido por <a href="#">Lucas Roncheti Design && Code</a>
+                        Desenvolvido por <a href="https://lucasrd.site/">Lucas Roncheti Design && Code</a>
         
                     </p>
                 </div>
@@ -192,3 +238,5 @@
 </body>
 
 </html>
+
+<script src="../../features/js/mobileMenu.js"></script>

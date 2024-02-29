@@ -9,7 +9,7 @@ header{
 }
 
 .containerHeader{
-    width: 1600px;
+    width: 80%;
     height: 100%;
 
     margin: auto;
@@ -54,14 +54,18 @@ nav div:hover{
     background-color: var(--branco);
 }
 
-
+.section{
+    height: 120%;
+}
 
 .containerContent{
     width: 100%;
-    height: calc(100% - 180px);
+    height: calc(100% - 30%);
     display: flex;
     position: absolute;
     bottom: 0;
+
+
 }
 
 .imgProdutos{
@@ -96,6 +100,109 @@ nav div:hover{
 
 
 
+
+.botaoLenguage{
+    min-width: 70px;
+    height: 25px;
+    background-color:rgb(244, 244, 244);
+    border: solid 2px rgb(61, 58, 58);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.parteInternaBotao{
+    width: 50%;
+    height: 100%;
+    background-color:rgb(60, 204, 20) ;
+    box-shadow: 2px 2px 3px rgb(128, 255, 0);
+    box-shadow: inset 0px 1px 2px  rgb(166, 255, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: 2.5%;
+}
+
+.toLeftButton{
+    animation: toLeftButton 0.5s  ease-in-out forwards;
+}
+.toRightButton{
+    animation: toRightButton 0.5s  ease-in-out forwards;
+}
+
+@keyframes toLeftButton{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+@keyframes toRightButton{
+    0%{
+        left: 50%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.botaoLenguage img:nth-child(2){
+    height: 95%;
+    position: absolute;
+    left: 2.5%;
+    
+}
+.botaoLenguage img:nth-child(3){
+    height: 95%;
+    position: absolute;
+    right: 2.5%;
+}
+
+.containerHeaderMobile{
+    display: none;
+  }
+  .fadeIn{
+    display: block;
+    animation: fadeInMenu 0.3s ease-in-out forwards;
+  }
+
+  .fadeOut{
+   
+    animation: fadeOutMenu 0.3s ease-in-out forwards;
+  }
+
+  
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 1;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+  
+@keyframes fadeOutMenu {
+    0% {
+        opacity: 1;
+        /* Começa e termina com opacidade 0 */
+    }
+
+    100% {
+        opacity: 0;
+        /* Tem opacidade 1 na metade da animação */
+    }
+
+}
+
+
 @media screen and (max-width: 1400px){
 
     /*Produtos*/
@@ -114,5 +221,83 @@ nav div:hover{
     .textProdutos p {
         width: 80%;
     }
+
+    .containerHeader{
+        width: 80%;
+    }
     
+}
+
+@media screen and (max-width:800px) {
+
+    header{
+        display: none;
+    }
+    .containerHeader{
+       display: none;
+    }
+    .containerHeaderMobile{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 20;
+        top: 40px;
+    }
+
+    .navMobile{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        
+        flex-wrap: wrap;
+        background-color: rgba(207, 207, 207, 0.88);
+        border-radius: 0 0 20px 20px;
+        backdrop-filter:blur(02px);
+        -webkit-backdrop-filter:blur(02px);
+    }
+
+    .containerHeaderMobile  a {
+        width: 35%;
+        height: 20%;
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--cor01);
+        color: white;
+        box-shadow: var(--boxShadow);
+        border-radius: 10px;
+    }
+
+    .containerContent{
+        height: 100%;
+        flex-direction: column;
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .imgProdutos{
+        width: 100%;
+        padding-right: 0;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .textProdutos{
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .textProdutos p {
+        width: 95%;
+       
+    }
+
+    .section{
+        margin: 30px 0;
+        height: auto;
+     
+    }
 }
