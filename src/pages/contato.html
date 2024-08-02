@@ -11,7 +11,20 @@
     <link rel="stylesheet" href="../css/headerMobile.css">
     <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
     <title>Contato</title>
+
+    <style>
+        .mail-download{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 6001;
+    /* width: 100px; */
+    /* height: 100px; */
+}
+    </style>
 </head>
+
+
 
 <body>
    
@@ -95,6 +108,7 @@
                 </div>
 
                 <form id="contact" class="formContact">
+                    <img id="mailDow" class="displayNone mail-download" src="../../src/img/mail-download.gif" alt="">
                     <div class="inputArea">
                         <input type="text" id="nameInput" placeholder="Nome">
                     </div>
@@ -121,6 +135,10 @@
                         var email = document.getElementById("emailInput").value.trim();
                         var message = document.getElementById("messageTextarea").value.trim();
 
+                        let mail=document.getElementById("mailDow")
+
+                            mail.classList.toggle("displayNone")
+
                         // Expressão regular para validar o formato do e-mail
                         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -142,7 +160,10 @@
                             })
                             .then(response => response.text())
                             .then(data => {
-                                alert(data); // Exibe o resultado do envio do formulário
+                                alert(data)
+                            let form = document.getElementById("contact")
+                            mail.classList.toggle("displayNone")
+                            form.reset()
                             })
                             .catch(error => {
                                 console.error("Erro ao enviar formulário:", error);
