@@ -60,12 +60,10 @@ nav div:hover{
 
 .containerContent{
     width: 100%;
-    height: calc(100% - 30%);
+    height: auto;
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
-
-
 }
 
 .imgProdutos{
@@ -243,31 +241,32 @@ nav div:hover{
         z-index: 20;
         top: 40px;
     }
-
     .navMobile{
         width: 100%;
-        height: 100%;
-        position: absolute;
-        
+        height: 65%;
+        display: flex;
         flex-wrap: wrap;
-        background-color: rgba(207, 207, 207, 0.88);
+        background-color: rgba(207, 207, 207, 0.679);
         border-radius: 0 0 20px 20px;
-        backdrop-filter:blur(02px);
-        -webkit-backdrop-filter:blur(02px);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
     }
 
     .containerHeaderMobile  a {
         width: 35%;
-        height: 20%;
-        margin: 5%;
+        height: 11%;
+        margin: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        background-color: var(--cor01);
-        color: white;
+        /* background-color: var(--cor01); */
+        color: #676767;
         box-shadow: var(--boxShadow);
         border-radius: 10px;
+        border: 1px solid;
+        padding: 2px;
+        font-size: 0.8em;
     }
 
     .containerContent{

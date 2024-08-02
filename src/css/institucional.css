@@ -69,22 +69,23 @@ nav div:hover{
     align-items: center;
     text-align: right;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
+    /* height: 48%; */
+    margin-bottom: 10px;
 }
 
 .imgHistória{
-    width: 50%;
-    height: 100%;
+    width: 71%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-   
+    align-items: start;
 }
 
 .imgHistória img{
     width: 100%;
-
+    margin: 10% 0%;
 }
 .imgProdutos img{
    
@@ -112,7 +113,7 @@ justify-content: center;
 
 align-items: center;
 
-height: 800px;
+height: auto;
 
 padding: 10px;
 }
@@ -123,7 +124,7 @@ padding: 10px;
     display: flex;
     flex-direction: column;
     height: auto;
-    margin-left: 10%;
+    margin-left: 3%;
     width: 100%;
 }
 
@@ -283,27 +284,30 @@ padding: 10px;
 
     .navMobile{
         width: 100%;
-        height: 100%;
-        
+        height: 65%;
+        display: flex;
         flex-wrap: wrap;
-        background-color: rgba(207, 207, 207, 0.88);
+        background-color: rgba(207, 207, 207, 0.679);
         border-radius: 0 0 20px 20px;
-        backdrop-filter:blur(02px);
-        -webkit-backdrop-filter:blur(02px);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
     }
 
     .containerHeaderMobile  a {
         width: 35%;
-        height: 20%;
-        margin: 5%;
+        height: 11%;
+        margin: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        background-color: var(--cor01);
-        color: white;
+        /* background-color: var(--cor01); */
+        color: #676767;
         box-shadow: var(--boxShadow);
         border-radius: 10px;
+        border: 1px solid;
+        padding: 2px;
+        font-size: 0.8em;
     }
 
     .containerHeader,.containerImg{
@@ -315,15 +319,14 @@ padding: 10px;
 
     .textProdutos{
         width: 100%;
-        height: 125%;
+        height: 92%;
         flex-direction: column;
         justify-content: space-around;
-     
-       
+        font-size: 0.8em;
     }
 
    .imgHistória{
-    width: 70%;
+    width: 79%;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -331,6 +334,7 @@ padding: 10px;
 
    .imgHistória img{
     width: 100%;
+    margin: 3% 0%;
    }
 
    .containerContent{

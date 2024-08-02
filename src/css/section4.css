@@ -10,7 +10,7 @@
 .upSection {
     width: 100%;
     height: 50%;
-    background-color: var(--cor01);
+    background-color: #161616;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +73,10 @@
     cursor: pointer;
     transition: 0.5s;
     text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -162,14 +166,14 @@
     margin: 5px 0;
     display: flex;
 
-    width: 110%;
+    width: 90%;
     justify-content: center;
     align-items: center;
 
 }
 
 .formContact textarea {
-    width: 64%;
+    width: 77%;
     border: solid 2px var(--cor04);
     border-radius: 5px;
     margin: 0% 1% 0% 10px;
@@ -182,11 +186,11 @@
 }
 
 .sendButton {
-    width: 50%;
+    width: 35px;
+    height: auto;
     height: 100%;
     border: solid 2px var(--cor04);
-    border-radius: 5px;
-
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,6 +201,16 @@
     background-color: var(--cor02);
     transition: 0.4s;
 }
+
+.sendButton img {
+ height: 60%;
+
+}
+.sendButton button {
+border: none;
+cursor: pointer;
+   }
+
 
 
 
@@ -271,6 +285,7 @@
         width: 100%;
         align-items: center;
         height: 20%;
+        margin: 10px;
     }
 
     .inputArea{
@@ -287,6 +302,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        /* width: 90%; */
     }
 
 
@@ -300,7 +316,7 @@
         margin-left: 0;
         margin-top: 5%;
         height: 20%;
-        background-color: var(--cor01);
+        /* background-color: var(--cor01); */
     }
 
     .imgFaixaFooter{

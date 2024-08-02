@@ -4,7 +4,7 @@
 
 .containerImg {
     width: 100%;
-    height: 100%;
+    height: 95%;
     position: absolute;
     overflow: hidden;
     background-color:rgb(231, 222, 216);
@@ -128,17 +128,27 @@ animation: moveRight var(--timeSlider) ease-in-out infinite ;
 
 .textSign{
     
-    width: 56%;
-    height: 487px;
-    position: absolute;
-    z-index: 5;
-    top: 50%;
-    transform: translateY(-30%);
-    backdrop-filter:blur(02px) ;
-    -webkit-backdrop-filter:blur(02px);
+width: 56%;
+    
+height: 428px;
+    
+position: absolute;
+    
+z-index: 5;
+    
+top: 50%;
+    
+transform: translateY(-30%);
+    
+backdrop-filter:blur(02px);
+    
+-webkit-backdrop-filter:blur(02px);
 }
 
 
+.video{
+    width: 100%;
+}
 
 .slideText{
  
@@ -159,21 +169,17 @@ animation: moveRight var(--timeSlider) ease-in-out infinite ;
 
 .textMain{
     width: 56%;
-    height: 487px;
+    height: 426px;
     top: 50%;
     transform: translateY(-30%);
-
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-around;
     position: absolute;
     left: 0px;
-
     z-index: 10;
-
     padding-left: 10%;
-
     color: var(--branco);
 }
 
@@ -197,10 +203,10 @@ animation: moveRight var(--timeSlider) ease-in-out infinite ;
    width: 100%;
    height: 12px;
    position: absolute;
-   bottom: 0px;
+   bottom: 5%;
    z-index: 5;
    animation: sizeSpanOrange  var(--timeSlider) linear infinite;
-   mix-blend-mode: overlay !important;;
+   mix-blend-mode: overlay !important;
 }
 
 
@@ -432,28 +438,30 @@ animation: moveRight var(--timeSlider) ease-in-out infinite ;
 
     .navMobile{
         width: 100%;
-        height: 100%;
+        height: 65%;
         display: flex;
         flex-wrap: wrap;
-        background-color: rgba(207, 207, 207, 0.88);
+        background-color: rgba(207, 207, 207, 0.679);
         border-radius: 0 0 20px 20px;
-        backdrop-filter:blur(02px);
-        -webkit-backdrop-filter:blur(02px);
-   
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
     }
 
     .containerHeaderMobile  a {
         width: 35%;
-        height: 20%;
-        margin: 5%;
+        height: 11%;
+        margin: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        background-color: var(--cor01);
-        color: white;
+        /* background-color: var(--cor01); */
+        color: #676767;
         box-shadow: var(--boxShadow);
         border-radius: 10px;
+        border: 1px solid;
+        padding: 2px;
+        font-size: 0.8em;
     }
 
     .containerHeader,.containerImg{
@@ -477,6 +485,7 @@ animation: moveRight var(--timeSlider) ease-in-out infinite ;
         height: 300px;
         top: 50%;
         transform: translateY(-100%);
+       
     }
 
 

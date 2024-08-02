@@ -67,10 +67,11 @@ nav div:hover {
 
 .containerContent {
     width: 100%;
-    height: calc(60%);
+    /* height: calc(60%); */
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
+    height: 70%;
 }
 
 
@@ -98,23 +99,19 @@ nav div:hover {
 
 .downSection {
     width: 100%;
-    height: 70%;
+    height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 260px;
+    margin: 40px;
 }
 
 .textContact {
     width: 50%;
-    height: 50%;
-
+    height: 15%;
     text-align: right;
-
     display: flex;
-
-
     flex-direction: column;
     align-items: right;
 }
@@ -134,9 +131,8 @@ nav div:hover {
 
 .textContact h2 {
     font-size: 2em;
-    margin: 5px 0px 5px 0px;
+    margin: 5px 0px 22px 0px;
     text-align: center;
-
 }
 
 .textContact p {
@@ -151,7 +147,7 @@ nav div:hover {
 
 .formContact {
     width: 50%;
-    height: 100%;
+    height: 72%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -196,8 +192,8 @@ nav div:hover {
 }
 
 .sendButton {
-    width: 50%;
-    height: 20%;
+    width:40px;
+    height: 40px;
     border: solid 2px var(--cor04);
     border-radius: 5px;
     margin-left: 5px;
@@ -206,11 +202,17 @@ nav div:hover {
     align-items: center;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 50%;
 }
 
 .sendButton:hover {
     background-color: var(--cor02);
     transition: 0.4s;
+}
+
+.sendButton img{
+   height: 20px;
+
 }
 
 
@@ -439,7 +441,8 @@ nav div:hover {
 
     .sendButton {
         margin-top: 10px;
-        width: 60%;
+        width: 40px;
+        border-radius: 50%;
     }
 
     .textArea {
@@ -479,28 +482,32 @@ nav div:hover {
         margin-top: 40px;
     }
 
-    .navMobile {
+    .navMobile{
         width: 100%;
-        height: 100%;
+        height: 65%;
+        display: flex;
         flex-wrap: wrap;
-        background-color: rgba(207, 207, 207, 0.88);
+        background-color: rgba(207, 207, 207, 0.679);
         border-radius: 0 0 20px 20px;
-        backdrop-filter: blur(02px);
-        -webkit-backdrop-filter: blur(02px);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
     }
 
-    .containerHeaderMobile a {
+    .containerHeaderMobile  a {
         width: 35%;
-        height: 20%;
-        margin: 5%;
+        height: 11%;
+        margin: 3%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        background-color: var(--cor01);
-        color: white;
+        /* background-color: var(--cor01); */
+        color: #676767;
         box-shadow: var(--boxShadow);
         border-radius: 10px;
+        border: 1px solid;
+        padding: 2px;
+        font-size: 0.8em;
     }
 
     .containerHeader,
@@ -533,7 +540,8 @@ nav div:hover {
     }
 
     .containerContent {
-        height: 100vh;
+        height: auto;
+        margin-bottom: 10px;
     }
 
 
