@@ -74,7 +74,7 @@ let mudarLinguagemMobile = () =>{
 
 
 let traducao = () =>{
-    var url = '../../eng/index.html'
+    var url = '../../indexEng.html'
  
     window.location.href = url
 }

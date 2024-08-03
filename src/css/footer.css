@@ -3,7 +3,7 @@ footer {
     height: auto;
     overflow: hidden;
     font-size: 0.8em;
-    /* margin-top: 5%; */
+    margin-top: 5%;
 }
 
 
@@ -16,7 +16,7 @@ footer {
 
 .containerLIstFooter {
     width: 100%;
-    height: 338px;
+    height: 313px;
     display: flex;
     justify-content: center;
     align-items: center;

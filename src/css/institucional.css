@@ -338,6 +338,6 @@ padding: 10px;
    }
 
    .containerContent{
-    height: 200vh;
+    height: auto;
    }
 }
