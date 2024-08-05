@@ -150,6 +150,10 @@ backdrop-filter:blur(02px);
     width: 100%;
 }
 
+.videoMobile{
+    height: 120%;
+    width: auto;
+}
 .slideText{
  
     animation: FadeInOut var(--timeSlider) ease-in-out infinite;

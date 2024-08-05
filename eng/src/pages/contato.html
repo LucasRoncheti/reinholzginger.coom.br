@@ -4,160 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../src/css/root.css">
+    <link rel="stylesheet" href="../../../src/css/root.css">
     <link rel="stylesheet" href="../../../src/css/contato.css">
-    <link rel="stylesheet" href="../../src/css/footer.css">
+    <link rel="stylesheet" href="../../../src/css/footer.css">
+    <link rel="stylesheet" href="../../../src/css/headerMobile.css">
+    <link rel="shortcut icon" href="../../../src/img/favicon.svg" type="image/x-icon">
+    <title>Contact</title>
 
-    <link rel="stylesheet" href="../css/headerMobile.css">
-    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
-    <title>Reinholz Ginger</title>
+    <style>
+        .mail-download {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 6001;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="section section2">
-     
-        <header>
-            <div class="containerHeader">
-                <a href="../../index.html"><img src="../../src/img/logoWhiteTransp.png" alt="Logo Reinholz Ginger"></a>
-                <nav>
-                    <a href="../../index.html">
-                        <div>HOME</div>
-                    </a>
-                    <a href="institucional.html">
-                        <div>ABOUT US</div>
-                    </a>
 
-                    <a href="produtos.html">
-                        <div>PRODUCTS</div>
-                    </a>
-
-                    <a href="expotacao.html">
-                        <div>EXPORT</div>
-                    </a>
-                    <a href="contato.html">
-                        <div>CONTACT</div>
-                    </a>
-                 
-                </nav>
-            </div>
-        </header>
-
-        <div id="containerHeaderMobile" class="containerHeaderMobile">
-           
-            <nav class="navMobile">
+    <header>
+        <div class="containerHeader">
+            <a href="../../index.html"><img src="../../src/img/logoWhiteTransp.png" alt="Reinholz Ginger Logo"></a>
+            <nav>
                 <a href="../../index.html">
                     <div>HOME</div>
                 </a>
                 <a href="institucional.html">
                     <div>ABOUT US</div>
                 </a>
-
                 <a href="produtos.html">
                     <div>PRODUCTS</div>
                 </a>
-
                 <a href="expotacao.html">
                     <div>EXPORT</div>
                 </a>
                 <a href="contato.html">
                     <div>CONTACT</div>
                 </a>
-                
             </nav>
         </div>
+    </header>
 
-        <div class="headerMobile">
-            <div >
-              </div>
-            <div onclick="fadeAnimation()"><img src="../img/Icon ionic-ios-menu.svg" alt="Mobile Menu"></div>
-        </div>
+    <div id="containerHeaderMobile" class="containerHeaderMobile">
+        <nav class="navMobile">
+            <a href="../../index.html">
+                <div>HOME</div>
+            </a>
+            <a href="institucional.html">
+                <div>ABOUT US</div>
+            </a>
+            <a href="produtos.html">
+                <div>PRODUCTS</div>
+            </a>
+            <a href="expotacao.html">
+                <div>EXPORT</div>
+            </a>
+            <a href="contato.html">
+                <div>CONTACT</div>
+            </a>
+        </nav>
+    </div>
 
-        <div class="imgProdutos">
-            <img src="../img/fundoContato.png" alt="Image of various means of transportation background">
-        </div>
+    <div class="headerMobile">
+        <div></div>
+        <div onclick="fadeAnimation()"><img src="../img/Icon ionic-ios-menu.svg" alt="Mobile Menu"></div>
+    </div>
 
-        <div class="containerContent">
-        
+    <div class="imgProdutos">
+        <img src="../img/fundoContato.png" alt="Image of various means of transport in the background">
+    </div>
 
-            <div id ="downSection" class="downSection">
-
-                <div class="textContact">
-                    <span></span>
-                    <div class="containerTextForm">
-                        <h2>We are here to listen to you!</h2>
-                        <p>
-                            Get in touch with us for partnerships, inquiries, or any other matter.
-                            <br>Your message is important to us.
-    
-                        </p>
-                    </div>
-                    <div class="anotherDiv"></div>
+    <div class="containerContent">
+        <div id="downSection" class="downSection">
+            <div class="textContact">
+                <span></span>
+                <div class="containerTextForm">
+                    <h2>We are here to listen to you!</h2>
+                    <p>
+                        Contact us for partnerships, consultations, or any other matters.
+                        <br>Your message is important to us.
+                    </p>
                 </div>
-
-                  <form id="contact" class="formContact">
-                    <div class="inputArea">
-                        <input type="text" id="nameInput" placeholder="Nome">
-                    </div>
-
-                    <div class="inputArea">
-                        <input type="email" id="emailInput" placeholder="E-mail">
-                    </div>
-
-                    <div class="textArea">
-                        <textarea id="messageTextarea" cols="30" rows="10" placeholder="Seu texto aqui"></textarea>
-                    </div>
-
-                    <div id="submitBtnContato" class="sendButton">
-                        <div ><img src="../../src/img/Repetição de grade 1.svg" alt=""></div>
-                    </div>
-                </form>
-
-                <script>
-                    /// para a página contato 
-
-                    document.getElementById("submitBtnContato").addEventListener("click", function () {
-                        // Validação do formulário
-                        var name = document.getElementById("nameInput").value.trim();
-                        var email = document.getElementById("emailInput").value.trim();
-                        var message = document.getElementById("messageTextarea").value.trim();
-
-                        // Expressão regular para validar o formato do e-mail
-                        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                        if (name === "" || !emailRegex.test(email) || message === "") {
-                            alert("Please fill out all fields correctly.");
-                            return; // Impede o envio do formulário se os campos estiverem vazios ou o e-mail estiver em um formato inválido
-                        }
-
-                        // Dados do formulário
-                        var formData = new FormData();
-                        formData.append("name", name);
-                        formData.append("email", email);
-                        formData.append("message", message);
-
-                        // Envia os dados para o PHP
-                        fetch("../../includes/send_email.php", {
-                                method: "POST",
-                                body: formData
-                            })
-                            .then(response => response.text())
-                            .then(data => {
-                                alert(data); // Exibe o resultado do envio do formulário
-                            })
-                            .catch(error => {
-                                console.error("Erro ao enviar formulário:", error);
-                            });
-                    });
-                </script>
-    
-    
             </div>
 
+            <form id="contact" class="formContact">
+                <img id="mailDow" class="displayNone mail-download" src="../../src/img/mail-download.gif" alt="">
+                <div class="inputArea">
+                    <input type="text" id="nameInput" placeholder="Name">
+                </div>
+                <div class="inputArea">
+                    <input type="email" id="emailInput" placeholder="Email">
+                </div>
+                <div class="textArea">
+                    <textarea id="messageTextarea" cols="30" rows="10" placeholder="Your message here"></textarea>
+                </div>
+                <div id="submitBtnContato" class="sendButton">
+                    <div><img src="../../src/img/sendemail.svg" alt=""></div>
+                </div>
+            </form>
+
+            <script>
+                // for the contact page
+
+                document.getElementById("submitBtnContato").addEventListener("click", function () {
+                    // Form validation
+                    var name = document.getElementById("nameInput").value.trim();
+                    var email = document.getElementById("emailInput").value.trim();
+                    var message = document.getElementById("messageTextarea").value.trim();
+
+                    let mail = document.getElementById("mailDow")
+                    mail.classList.toggle("displayNone")
+
+                    // Regular expression to validate the email format
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (name === "" || !emailRegex.test(email) || message === "") {
+                        alert("Please fill in all fields correctly.");
+                        return; // Prevents form submission if fields are empty or email format is invalid
+                    }
+
+                    // Form data
+                    var formData = new FormData();
+                    formData.append("name", name);
+                    formData.append("email", email);
+                    formData.append("message", message);
+
+                    // Send data to PHP
+                    fetch("../../eng/includes/send_email.php", {
+                            method: "POST",
+                            body: formData
+                        })
+                        .then(response => response.text())
+                        .then(data => {
+                            alert(data)
+                            let form = document.getElementById("contact")
+                            mail.classList.toggle("displayNone")
+                            form.reset()
+                        })
+                        .catch(error => {
+                            console.error("Error sending form:", error);
+                        });
+                });
+            </script>
+
         </div>
-
-        
-    </section>
-
+    </div>
 
     <footer>
         <div>
@@ -165,8 +157,7 @@
         </div>
 
         <div class="containerLIstFooter">
-
-            <div class=" endereco sliceFooter">
+            <div class="endereco sliceFooter">
                 <p>
                     AE Zona Rural, 00, Galo - 29260-000
                     Domingos Martins - ES - Brazil
@@ -174,27 +165,23 @@
                 <p>
                     <strong>+55 27 99800-4307</strong>
                 </p>
-
                 <p>
                     contato@reinholzginger.com.br
                 </p>
             </div>
 
-            <div class=" none sliceFooter">
-
-            </div>
+            <div class="none sliceFooter"></div>
 
             <div class="sliceFooter">
                 <ul>
                     <a href="../pages/institucional.html">
-                        <li>Our History</li><br>
+                        <li>Our Story</li><br>
                     </a>
                     <a href="../pages/produtos.html">
                         <li>Products</li>
                     </a>
                 </ul>
             </div>
-
 
             <div class="sliceFooter">
                 <ul>
@@ -205,20 +192,17 @@
                         <li>Contact</li>
                     </a>
                 </ul>
-
             </div>
 
-            <div class=" sliceFooter">
+            <div class="sliceFooter">
                 <ul>
                     <a href="../pages/produtos.html">
                         <li>Ginger</li>
                     </a>
-
                 </ul>
-
             </div>
 
-            <div class=" marginSlicer sliceFooter">
+            <div class="marginSlicer sliceFooter">
                 <ul>
                     <a href="../pages/contato.html">
                         <li>Contact Us</li><br>
@@ -227,21 +211,18 @@
                         <li>Visual Identity</li>
                     </a>
                 </ul>
-
             </div>
 
             <div class="sliceFooter">
                 <h3>Our Social Media</h3>
                 <a href="https://www.instagram.com/reinholzginger/"><img class="imgLogoInstagram" src="../img/instagramLogo.svg" alt=""></a>
             </div>
-
         </div>
 
         <div class="footer">
             <p>
                 All Rights Reserved - Reinholz Ginger Comércio de Raízes LTDA <br>
-                Developed by <a href="#">Lucas Roncheti Design && Code</a>
-
+                Developed by <a target="_blank" href="www.lucasrd.site">Lucas Roncheti Design && Code</a>
             </p>
         </div>
     </footer>

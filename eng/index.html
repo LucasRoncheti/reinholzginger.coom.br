@@ -1,29 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/root.css">
-    <link rel="stylesheet" href="src/css/headerMobile.css">
-    <link rel="stylesheet" href="src/css/section1.css">
-    <link rel="stylesheet" href="src/css/section2.css">
-    <link rel="stylesheet" href="src/css/section3.css">
+    <link rel="stylesheet" href="../src/css/root.css">
+    <link rel="stylesheet" href="../src/css/headerMobile.css">
+    <link rel="stylesheet" href="../src/css/section1.css">
+    <link rel="stylesheet" href="../src/css/section2.css">
+    <link rel="stylesheet" href="../src/css/section3.css">
     <link rel="stylesheet" href="../src/css/section4.css">
-    <link rel="stylesheet" href="src/css/footer.css">
-    <link rel="stylesheet" href="src/css/resposividadeTelasAntigas.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/resposividadeTelasAntigas.css">
 
-    <link rel="shortcut icon" href="src/img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/img/favicon.svg" type="image/x-icon">
 
-    <meta name="description" content="Taking Ginger from Brazil to the world!">
-    <meta name="keywords" content="ginger, exportation, root">
+    <meta name="description" content="Bringing Ginger from Brazil to the world!">
+    <meta name="keywords" content="ginger, export, field">
     <meta name="robots" content="index, follow"> 
     <meta name="author" content="Lucas Roncheti Design && Code">
+
+    <style>
+        .sendButton {
+            width: 40px;
+            height: 40px;
+            border: solid 2px var(--cor04);
+            border-radius: 5px;
+            margin-left: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        .mail-download{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 1000;
+        }
+
+        .loadingImg{
+            width: 300px;
+            height: auto;
+        }
+        .loadingDiv{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 30000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+    </style>
+
+    <script>
+        let loadingAnimation=()=>{
+            let div = document.getElementById('loadingDiv')
+            div.style.display = 'none'
+    
+        }
+    </script>
+
     <title>Reinholz Ginger</title>
 </head>
 
-<body>
+<div id="loadingDiv" class="loadingDiv"><img class="loadingImg" src="src/img/loading.gif" alt=""></div>
+
+<body onload="loadingAnimation()">
+
     <section class="section">
         <header>
             <div class="containerHeader">
@@ -47,17 +97,13 @@
                         <div>CONTACT</div>
                     </a>
                     <div id="botaoLenguage" class="botaoLenguage">
-                        <div onclick="mudarLinguagemMobile()" id="parteInternaBotaoMobile" class="parteInternaBotaoMobile"></div>
+                        <div  onclick="mudarLinguagemMobile()"  id="parteInternaBotaoMobile" class="parteInternaBotaoMobile"></div>
                         <img onclick="mudarLinguagemMobile()" src="src/img/pt.png" alt="Brazil flag button"><img onclick="mudarLinguagemMobile()" src="src/img/eng.png" alt="UK flag button">
                     </div>
                 </nav>
-             
             </div>
-
-        
         </header>
         <div id="containerHeaderMobile" class="containerHeaderMobile">
-           
             <nav class="navMobile">
                 <a href="index.html">
                     <div>HOME</div>
@@ -76,86 +122,78 @@
                 <a href="#downSection">
                     <div>CONTACT</div>
                 </a>
-                
             </nav>
         </div>
 
         <div class="headerMobile">
             <div id="botaoLenguage" class="botaoLenguage">
-                <div onclick="mudarLinguagem()" id="parteInternaBotao" class="parteInternaBotao"></div>
+                <div  onclick="mudarLinguagem()"  id="parteInternaBotao" class="parteInternaBotao"></div>
                 <img onclick="mudarLinguagem()" src="src/img/pt.png" alt="Brazil flag button"><img onclick="mudarLinguagem()" src="src/img/eng.png" alt="UK flag button">
             </div>
             <div onclick="fadeAnimation()"><img src="src/img/Icon ionic-ios-menu.svg" alt="Mobile Menu"></div>
         </div>
 
-
         <img class="imagemLogoMobile" src="src/img/logoWhiteTransp.png" alt="Reinholz Ginger Logo">
 
-        
         <div class="containerSlider">
             <div id="textSign" class="textSign orange">
-
             </div>
 
-            <div id="textMain" class="textMain ">
+            <div id="textMain" class="textMain">
                 <div id="textInside" class="textInside slideText">
                     <h2>From Brazil to the World:</h2>
-                    <p>We offer high-quality ginger, cultivated with care and dedication in Brazilian soil.</p>
+                    <p>We offer high-quality ginger,
+                        grown with care and dedication
+                        in Brazilian soil.</p>
                 </div>
-
             </div>
             <div class="containerImg">
-                <img  class="slide" id="img01" src="src/img/background.jpg" alt="Image of a plantation">
-                <img class="slide" id="img02" src="src/img/background2.jpg" alt="Image of a port ">
-                <img class="slide" id="img03" src="src/img/foto gengibre.jpg" alt="Image of ginger and background plantation ">
+                <video autoplay loop class="slide video" id="img01" src="../src/img/video02.mp4" alt="Video of a Reinholz Ginger plantation"></video>
+                <img class="slide" id="img02" src="../src/img/background2.jpg" alt="Image of a port">
+                <img class="slide" id="img03" src="../src/img/foto gengibre.jpg" alt="Image of ginger and a plantation in the background">
             </div>
             <div class="containerImgMobile">
-                <img  class="slideMobile" id="img01Mobile" src="src/img/mobile01.png" alt="Image of a plantation">
-                <img class="slideMobile" id="img02Mobile" src="src/img/mobile02.png" alt="Image of a port ">
-                <img class="slideMobile" id="img03Mobile" src="src/img/mobile03.png" alt="Image of ginger and background plantation ">
+                <video autoplay  loop  class="slideMobile videoMobile" id="img01" src="../src/img/videomobile.mp4" alt="Video  de uma plantação da Reinholz Ginger "></video>
+                <img class="slideMobile" id="img02Mobile" src="../src/img/mobile02.png" alt="Image of a port">
+                <img class="slideMobile" id="img03Mobile" src="../src/img/mobile03.png" alt="Image of ginger and a plantation in the background">
             </div>
-           
         </div>
 
         <span class="spanLineOrange"></span>
         <span class="spanLineGreen"></span>
     </section>
 
-    <!-- Second page  -->
-    <section class=" section  displayFlexSection">
+    <!-- second page -->
+    <section class="section displayFlexSection">
         <div class="leftBox">
             <img src="src/img/caixaGengibre.png" alt="Reinholz Ginger ginger box">
         </div>
         <div class="rightBox">
             <div class="containerTextSecondPage">
                 <span></span>
-                <p>Exploring new horizons in ginger production and export, Reinholz Ginger stands out for innovative cultivation, excellent storage, and careful processing, promoting freshness and quality with each delivery.</p>
+                <p>Exploring new horizons in ginger production and export, Reinholz Ginger stands out
+                    for innovative cultivation, excellent storage, and
+                    a careful processing process,
+                    promoting freshness and quality in every delivery.</p>
                  <a href="src/pages/produtos.html">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- Third session -->
+    <!-- third section -->
     <section class="section thirthSection">
         <div class="containerDivs">
             <div class="contentThirdthSection">
-
-
-                <h2 class="h2TextSection3">Harvesting quality, exporting freshness. </h2>
-                <p class="pTextSection3">Experience and innovation in the ginger universe from planting to exportation.</p>
-                <img class="containerPhoto" src="src/img/Container 2.png" alt="Reinholz Ginger Container">
-
-
+                <h2 class="h2TextSection3">Harvesting quality, exporting freshness.</h2>
+                <p class="pTextSection3">Experience and innovation in the ginger world, from planting to export.</p>
+                <img class="containerPhoto" src="src/img/Container 2.png" alt="Reinholz Ginger container image">
             </div>
-
         </div>
         <div class="inferiorDiv">
             <img src="src/img/iconesExport.svg" alt="">
             <img src="src/img/iconesMobile.svg" alt="">
         </div>
-    
     </section>
-
 
     <section class="section fouthSection">
         <div class="upSection">
@@ -165,30 +203,30 @@
 
             <div class="rightBoxFourthPage">
                 <div class="containerTextFourthPage">
-                    <span></
-
-span>
+                    <span></span>
                     <p>
-                        Acting on the international scene for almost a decade, Reinholz Ginger stands out for tradition and excellence, bringing Brazilian ginger quality to dozens of countries, with a special focus on providing unique and healthy flavors to Europe and the United States.
+                        Operating on the international scene for nearly a decade,
+                        Reinholz Ginger stands out for its tradition and excellence,
+                        bringing the quality of Brazilian ginger to dozens of countries,
+                        with a special focus on providing unique and healthy flavors
+                        to Europe and the United States.
                     </p>
 
                     <a href="src/pages/expotacao.html">Learn More</a>
                 </div>
             </div>
             <div>
-
             </div>
         </div>
         <div id="downSection" class="downSection">
-
+            <img id="mailDow" class="displayNone mail-download" src="src/img/mail-download.gif" alt="">
             <div class="textContact">
                 <span></span>
                 <div class="containerTextForm">
                     <h2>We are here to listen to you!</h2>
                     <p>
-                        Get in touch with us for partnerships, inquiries, or any other matter. <br>
+                        Contact us for partnerships, <br> consultations, or any other matters. <br>
                         Your message is important to us.
-
                     </p>
                 </div>
                 <div class="anotherDiv"></div>
@@ -196,25 +234,23 @@ span>
 
             <form id="contact" class="formContact">
                 <div class="inputArea">
-                    <input type="text" id="name" name="name" placeholder="Nome">
+                    <input type="text" id="nameInput" placeholder="Name">
                 </div>
-        
+
                 <div class="inputArea">
-                    <input type="email" id="email" name="email" placeholder="E-mail">
+                    <input type="email" id="emailInput" placeholder="Email">
                 </div>
-        
+
                 <div class="textArea">
-                    <textarea id="message" name="message" placeholder="Seu texto aqui" cols="30" rows="10"></textarea>
+                    <textarea id="messageTextarea" cols="25" rows="10" placeholder="Your message here"></textarea>
                 </div>
-        
-                <div class="sendButton">
-                    <button style="background-color: transparent;width: 100%;height: 100%;" type="button" id="submitBtn"><img src="src/img/Repetição de grade 1.svg" alt=""></button>
+
+                <div id="submitBtnContato" class="sendButton">
+                    <div><img style="width: 23px;height: 26px;" src="src/img/sendemail.svg" alt=""></div>
                 </div>
             </form>
-
         </div>
     </section>
-
 
     <footer>
         <div>
@@ -222,11 +258,10 @@ span>
         </div>
 
         <div class="containerLIstFooter">
-
-            <div class=" endereco sliceFooter">
+            <div class="endereco sliceFooter">
                 <p>
                     AE Zona Rural, 00, Galo - 29260-000
-                    Domingos Martins - ES - Brasil
+                    Domingos Martins - ES - Brazil
                 </p>
                 <p>
                     <strong>+55 27 99800-4307</strong>
@@ -237,8 +272,7 @@ span>
                 </p>
             </div>
 
-            <div class=" none sliceFooter">
-
+            <div class="none sliceFooter">
             </div>
 
             <div class="sliceFooter">
@@ -252,7 +286,6 @@ span>
                 </ul>
             </div>
 
-
             <div class="sliceFooter">
                 <ul>
                     <a href="src/pages/expotacao.html">
@@ -262,20 +295,17 @@ span>
                         <li>Contact</li>
                     </a>
                 </ul>
-
             </div>
 
-            <div class=" sliceFooter">
+            <div class="sliceFooter">
                 <ul>
                     <a href="src/pages/produtos.html">
                         <li>Ginger</li>
                     </a>
-
                 </ul>
-
             </div>
 
-            <div class=" marginSlicer sliceFooter">
+            <div class="marginSlicer sliceFooter">
                 <ul>
                     <a href="src/pages/contato.html">
                         <li>Contact Us</li><br>
@@ -284,21 +314,18 @@ span>
                         <li>Visual Identity</li>
                     </a>
                 </ul>
-
             </div>
 
             <div class="sliceFooter">
                 <h3>Our Social Media</h3>
                 <a href="https://www.instagram.com/reinholzginger/"><img class="imgLogoInstagram" src="src/img/instagramLogo.svg" alt=""></a>
             </div>
-
         </div>
 
         <div class="footer">
             <p>
                 All Rights Reserved - Reinholz Ginger Comércio de Raízes LTDA <br>
-                Developed by <a href="https://lucasrd.site/">Lucas Roncheti Design && Code</a>
-
+                Developed by <a target="_blank" href="https://lucasrd.site/">Lucas Roncheti Design && Code</a>
             </p>
         </div>
     </footer>
@@ -308,6 +335,47 @@ span>
 
 <script src="features/js/mainSlide.js"></script>
 <script src="features/js/mobileMenu.js"></script>
-<script src="features/js/sendMail.js"></script>
+<script>
+    /// for the contact page 
 
+    document.getElementById("submitBtnContato").addEventListener("click", function () {
 
+        let mail=document.getElementById("mailDow")
+
+        mail.classList.toggle("displayNone")
+        // Form validation
+        var name = document.getElementById("nameInput").value.trim();
+        var email = document.getElementById("emailInput").value.trim();
+        var message = document.getElementById("messageTextarea").value.trim();
+
+        // Regular expression to validate the email format
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name === "" || !emailRegex.test(email) || message === "") {
+            alert("Please fill in all fields correctly.");
+            return; // Prevents form submission if fields are empty or email format is invalid
+        }
+
+        // Form data
+        var formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("message", message);
+
+        // Send data to PHP
+        fetch("eng/includes/send_email.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                let form = document.getElementById("contact")
+                mail.classList.toggle("displayNone")
+                form.reset()
+            })
+            .catch(error => {
+                console.error("Error sending form:", error);
+            });
+    });
+</script>

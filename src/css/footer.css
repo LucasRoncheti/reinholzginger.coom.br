@@ -23,16 +23,26 @@ footer {
 }
 
 .sliceFooter {
-width: calc(1400px / 7);
-height: 50%;
-margin: 2px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: left;
-padding: 5px;
-font-size: 0.9em;
-position: relative;
+
+width: calc(1400px / 7);
+
+height: 50%;
+
+margin: 2px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+align-items: left;
+
+padding: 5px;
+
+font-size: 0.9em;
+
+position: relative;
 }
 .none{
     display: block;
@@ -56,7 +66,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-align: center;
     color: white;
 }
@@ -87,6 +97,7 @@ footer {
         flex-direction: column;
         height: auto;
         font-size: 1.2em;
+        margin: auto;
     }
     .sliceFooter{
         align-items: center;
@@ -110,7 +121,7 @@ footer {
         width: 100%;
         height: 100px;
         background-color: var(--cor01);
-        font-size: 0.6em;
+        font-size: 0.8em;
         padding: 10px;
     }
     .endereco{
